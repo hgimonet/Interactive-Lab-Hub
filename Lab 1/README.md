@@ -69,12 +69,20 @@ _Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening th
 The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 **Describe your setting, players, activity and goals here.**
 
+- This interaction is happening in a kitchen. 
+- Players are any humans in the kitchen, kid are okay!
+- Actors are not necessarily interacting with each other.
+- Actors are wondering when the rice they cooked is ready.
+
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
 **Include a picture of your storyboard here**
+
+![Storyboard](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/storyboard.jpeg?raw=true)
 
 Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
 **Summarize feedback you got here.**
 
+The color slider can be used as a time indicator.
 
 ## Part B. Act out the Interaction
 
