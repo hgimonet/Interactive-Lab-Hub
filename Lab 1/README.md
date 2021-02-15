@@ -112,14 +112,13 @@ Take a little time to set up the wizarding set-up that allows for someone to rem
 
 **Include your first attempts at recording the set-up video here.**
 
-In this video, the actor attempts to wash their hands for 30 seconds.
-**TODO**
+In this [video](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/wizard_setup_demo1.mp4), the actor attempts to wash their hands for 30 seconds.
 
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
 **Show the follow-up work here.**
 
-In this video, the actor attempts to wash their hands for **less than** 30 seconds.
+In this [video](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/wizard_setup_demo2.mp4), the actor attempts to wash their hands for **less than** 30 seconds.
 
 
 ## Part E. Costume the device
