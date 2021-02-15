@@ -142,7 +142,7 @@ Here are possible designs:
 ![Possible Designs](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/designs.jpg?raw=true)
 
 Here is the device costuming (which I was not able to use due to the phone turning dark when covered): 
-![Costuming](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/costuming.jpeg?raw=true)
+![Costuming](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/Costuming.jpeg?raw=true)
 
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
 
