@@ -69,10 +69,10 @@ _Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening th
 The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 **Describe your setting, players, activity and goals here.**
 
-- This interaction is happening in a kitchen. 
-- Players are any humans in the kitchen, kid are okay!
-- Actors are not necessarily interacting with each other.
-- Actors are wondering when the rice they cooked is ready.
+- The setting is in a kitchen or a bathroom, in front of a sink
+- Anyone who wants to wash their hands -- preferably only one person is in front of the sink
+- The actor is washing their hands in the sink
+- The goal is to wash hands for longer than 30 seconds! (alternatively this could be done with brushing teeth for over 3 minutes)
 
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
 **Include a picture of your storyboard here**
@@ -82,7 +82,7 @@ Sketch a storyboard of the interactions you are planning. It does not need to be
 Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
 **Summarize feedback you got here.**
 
-The color slider can be used as a time indicator.
+Using color as a timer is a simplifcation, people will not be able to see their progress which could be frustrating.
 
 ## Part B. Act out the Interaction
 
@@ -90,8 +90,11 @@ Try physically acting out the interaction you planned. For now, you can just pre
 
 **Are there things that seemed better on paper than acted out?**
 
+Having a single color for the entire 30 seconds is not very exciting. I wasn;t sure that it would matter that much, but I do think there should be a measure of progress.
+
 **Are there new ideas that occur to you or your collaborators that come up from the acting?**
 
+Figuring out whento have the progress light turn on it tricky - should it turn on when the hand intially get under the water or when they touch the soap? Initially I though the water but now the soap might be better.
 
 ## Part C. Prototype the device
 
@@ -102,14 +105,22 @@ Code for the "Tinkerbelle" tool, and instructions for setting up the server and 
 We invented this tool for this lab! 
 **Give us feedback on Tinkerbelle.**
 
+The time lag between the controller and the device is a little distracting, but I love the concept otherwise! Could you also add a probe/blinking option? 
+
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 **Include your first attempts at recording the set-up video here.**
 
+In this video, the actor attempts to wash their hands for 30 seconds.
+**TODO**
+
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
 **Show the follow-up work here.**
+
+In this video, the actor attempts to wash their hands for **less than** 30 seconds.
+
 
 ## Part E. Costume the device
 
@@ -119,8 +130,11 @@ Think about the setting of the device: is the environment a place where the devi
 
 **Include sketches of what your device might look like here.**
 
+![Possible Designs](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/designs.jpg?raw=true)
+
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
 
+The device should be waterproof, obviously, and there should be a sensor angled towards where people are most likely to wash their hands. I was thinking the device could be either mounted on the wall behind the sink, or onto the faucet. Ideally, there would be a light and a sensor mounted directly into the faucet (separate from the faucet sensor for having the hands underneath the faucet for water dispensing).
 
 ## Part F. Record
 
