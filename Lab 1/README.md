@@ -126,6 +126,10 @@ In this [video](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/
 
 [![](http://img.youtube.com/vi/S12Mbpneo2A/0.jpg)](http://www.youtube.com/watch?v=S12Mbpneo2A "Wizard Setup 2 Demo")
 
+Finally, I have the actual setup with Tinkerbelle here:
+
+[![](https://youtu.be/A4iu2SVTTEs/0.jpg)](http://www.youtube.com/watch?v=A4iu2SVTTEs "Wizard Setup 1 Demo")
+
 
 ## Part E. Costume the device
 
