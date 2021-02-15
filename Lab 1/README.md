@@ -147,12 +147,12 @@ The device should be waterproof, obviously, and there should be a sensor angled 
 
 The interection can be viewed below:
 
-**TODO**
+[![](http://img.youtube.com/vi/EwNgMLABZfE/0.jpg)](http://www.youtube.com/watch?v=EwNgMLABZfE "Lab 1 Demo")
 
 **Please indicate anyone you collaborated with on this Lab.**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
-I want to thank Irene, Rui and Nicole for getting the creative juices flowing in class, and my husband Abraham for being my willing ~~test subject~~ test user.
+I want to thank Irene, Rui and Nicole for getting the creative juices flowing in class, and my husband Abraham for being my willing ~~test subject~~ test user!
 
 
 # Staging Interaction, Part 2 
