@@ -110,15 +110,21 @@ The time lag between the controller and the device is a little distracting, but 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
+**Note:** Since I had some trouble initally with Tinkerbelle, I made my wizard setup with colored Post-It notes instead. It's not remote, but the wizard can simply remove the post-it notes when the time it right without saying anything to the actor. The wizard will be sitting out of sight (if Tinkerbell works out), with a timer in hand. Theu will change the colors when appropriate, either by changing the post-it notes, or the color on the Tinkerbelled phone.
+
 **Include your first attempts at recording the set-up video here.**
 
-In this [video](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/wizard_setup_demo1.mp4), the actor attempts to wash their hands for 30 seconds.
+In this [video](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/wizard_setup_demo1.mp4), the actor attempts to wash their hands for 30 seconds:
+
+[![](http://img.youtube.com/vi/bvU_7BHpYWM/0.jpg)](http://www.youtube.com/watch?v=bvU_7BHpYWM "Wizard Setup 1 Demo")
 
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
 **Show the follow-up work here.**
 
-In this [video](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/wizard_setup_demo2.mp4), the actor attempts to wash their hands for **less than** 30 seconds.
+In this [video](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/wizard_setup_demo2.mp4), the actor attempts to wash their hands for **less than** 30 seconds:
+
+[![](http://img.youtube.com/vi/S12Mbpneo2A/0.jpg)](http://www.youtube.com/watch?v=S12Mbpneo2A "Wizard Setup 2 Demo")
 
 
 ## Part E. Costume the device
@@ -139,8 +145,15 @@ The device should be waterproof, obviously, and there should be a sensor angled 
 
 **Take a video of your prototyped interaction.**
 
+The interection can be viewed below:
+
+**TODO**
+
 **Please indicate anyone you collaborated with on this Lab.**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+
+I want to thank Irene, Rui and Nicole for getting the creative juices flowing in class, and my husband Abraham for being my willing ~~test subject~~ test user.
+
 
 # Staging Interaction, Part 2 
 
