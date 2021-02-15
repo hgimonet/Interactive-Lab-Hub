@@ -128,8 +128,7 @@ In this [video](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/
 
 Finally, I have the actual setup with Tinkerbelle here:
 
-[![](https://youtu.be/A4iu2SVTTEs/0.jpg)](http://www.youtube.com/watch?v=A4iu2SVTTEs "Wizard Setup 1 Demo")
-
+[![](http://img.youtube.com/vi/A4iu2SVTTEs/0.jpg)](http://www.youtube.com/watch?v=A4iu2SVTTEs "")
 
 ## Part E. Costume the device
 
@@ -139,7 +138,11 @@ Think about the setting of the device: is the environment a place where the devi
 
 **Include sketches of what your device might look like here.**
 
+Here are possible designs:
 ![Possible Designs](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/designs.jpg?raw=true)
+
+Here is the device costuming (which I was not able to use due to the phone turning dark when covered): 
+![Costuming](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/costuming.jpeg?raw=true)
 
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
 
