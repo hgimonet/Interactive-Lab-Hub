@@ -50,23 +50,9 @@ E) [Costume the device](#part-e-costume-the-device)
 F) [Record the interaction](#part-f-record)
 
 ## The Report
-This readme.md page in your own repository should be edited to include the work you have done. You can delete everything but the headers and the sections between the **stars**. Write the answers to the questions under the starred sentences. Include any material that explains what you did in this lab hub folder, and link it in the readme.
-
-Labs are due on Mondays. Make sure this page is linked to on your main class hub page.
 
 ## Part A. Plan 
 
-To stage the interaction with your interactive device, think about:
-
-_Setting:_ Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
-
-_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
-
-_Activity:_ What is happening between the actors?
-
-_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge). 
-
-The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 **Describe your setting, players, activity and goals here.**
 
 - The setting is in a kitchen or a bathroom, in front of a sink
@@ -74,19 +60,15 @@ The interactive device can be anything *except* a computer, a tablet computer or
 - The actor is washing their hands in the sink
 - The goal is to wash hands for longer than 30 seconds! (alternatively this could be done with brushing teeth for over 3 minutes)
 
-Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
 **Include a picture of your storyboard here**
 
 ![Storyboard](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/storyboard.jpeg?raw=true)
 
-Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
 **Summarize feedback you got here.**
 
 Using color as a timer is a simplifcation, people will not be able to see their progress which could be frustrating.
 
 ## Part B. Act out the Interaction
-
-Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
 **Are there things that seemed better on paper than acted out?**
 
@@ -98,17 +80,11 @@ Figuring out whento have the progress light turn on it tricky - should it turn o
 
 ## Part C. Prototype the device
 
-You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device. 
-
-Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
-
-We invented this tool for this lab! 
 **Give us feedback on Tinkerbelle.**
 
 The time lag between the controller and the device is a little distracting, but I love the concept otherwise! Could you also add a probe/blinking option? 
 
 ## Part D. Wizard the device
-Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 **Note:** Since I had some trouble initally with Tinkerbelle, I made my wizard setup with colored Post-It notes instead. It's not remote, but the wizard can simply remove the post-it notes when the time it right without saying anything to the actor. The wizard will be sitting out of sight (if Tinkerbell works out), with a timer in hand. Theu will change the colors when appropriate, either by changing the post-it notes, or the color on the Tinkerbelled phone.
 
@@ -132,10 +108,6 @@ Finally, I have the actual setup with Tinkerbelle here:
 
 ## Part E. Costume the device
 
-Only now should you start worrying about what the device should look like. Develop a costume so that you can use your phone as this device.
-
-Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
-
 **Include sketches of what your device might look like here.**
 
 Here are possible designs:
@@ -157,7 +129,6 @@ The interection can be viewed below:
 [![](http://img.youtube.com/vi/EwNgMLABZfE/0.jpg)](http://www.youtube.com/watch?v=EwNgMLABZfE "Lab 1 Demo")
 
 **Please indicate anyone you collaborated with on this Lab.**
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
 I want to thank Irene, Rui and Nicole for getting the creative juices flowing in class, and my husband Abraham for being my willing ~~test subject~~ test user!
 
@@ -169,9 +140,9 @@ This describes the second week's work for this lab activity.
 
 ## Prep (to be done before Lab on Wednesday)
 
-You will be assigned three partners from another group. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
-
 **Summarize feedback from your partners here.**
+
+A standalone device would be cumbersome to charge, bulky and might fall off the sink, so my group suggested I integrate my device inside the faucet. They also mentioned that since children are very likely to not wash their hands for long enough, I should think about making the device fun and interactive -- almost everyone suggested I make the light shine through the water instead. Rui also suggested I use a gradient of colors to signal progress, while Irene suggested the added use of music to engage the user in the task of washing their hands.
 
 ## Make it your own
 
