@@ -149,4 +149,45 @@ Do last week’s assignment again, but this time:
 2) You can use any modality (e.g., vibration, sound) to prototype the behaviors, 
 3) We will be grading with an emphasis on creativity. 
 
-**Document everything here.**
+## Part A. Plan 
+
+**Describe your setting, players, activity and goals here.**
+
+**Include a picture of your storyboard here**
+
+**Summarize feedback you got here.**
+
+
+
+## Part B. Act out the Interaction
+
+**Are there things that seemed better on paper than acted out?**
+
+**Are there new ideas that occur to you or your collaborators that come up from the acting?**
+
+
+## Part C. Prototype the device
+
+
+
+## Part D. Wizard the device
+
+**Include your first attempts at recording the set-up video here.**
+
+**Show the follow-up work here.**
+
+
+## Part E. Costume the device
+
+**Include sketches of what your device might look like here.**
+
+**What concerns or opportunitities are influencing the way you've designed the device to look?**
+
+
+## Part F. Record
+
+The interection can be viewed below:
+
+**Please indicate anyone you collaborated with on this Lab.**
+
+
