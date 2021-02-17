@@ -142,7 +142,7 @@ This describes the second week's work for this lab activity.
 
 **Summarize feedback from your partners here.**
 
-A standalone device would be cumbersome to charge, bulky and might fall off the sink, so my group suggested I integrate my device inside the faucet. They also mentioned that since children are very likely to not wash their hands for long enough, I should think about making the device fun and interactive -- almost everyone suggested I make the light shine through the water instead. Rui also suggested I use a gradient of colors to signal progress, while Irene suggested the added use of music to engage the user in the task of washing their hands.
+A standalone device would be cumbersome to charge, bulky and might fall off the sink, so my group suggested I integrate my device inside the faucet. They also mentioned that since children are very likely to not wash their hands for long enough, I should think about making the device fun and interactive -- almost everyone suggested I make the light shine through the water instead. Rui also suggested I use a gradient of colors to signal progress, while Irene suggested the added use of music to engage the user in the task of washing their hands. Nicole added that the device could also sense the cleanliness of hands and take that into account when signaling when to rinse.
 
 ## Make it your own
 
