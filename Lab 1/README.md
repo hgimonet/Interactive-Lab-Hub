@@ -151,9 +151,16 @@ Do last week’s assignment again, but this time:
 
 ## Part A. Plan 
 
+Irene, Nicole, Rui and I had a very fruitful discussion after discussing our feedback. As we were brainstorming ideas, it occured to me that that most alert systems are sound or light-based. I wonder if we could incorporate other senses, such as smell, touch, and even taste into the equation! This led me to imagine spinning off of Irene's concept of wellness breaks with a timed humidifier that is connected to a smart home. The humidifier would, every hour, start extruding a relaxing herbal smell, as well as turn yoga music on, and lower the lights in the room for a 5-minute relaxation session. This could be used by people who work from home, or even in their office, for long periods of time. There could even be a voice or a phone notification encouraging the user to stand up and perform some stretching exercises. 
+
+
 **Describe your setting, players, activity and goals here.**
 
+
+
 **Include a picture of your storyboard here**
+
+
 
 **Summarize feedback you got here.**
 
