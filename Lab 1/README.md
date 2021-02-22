@@ -155,13 +155,15 @@ Irene, Nicole, Rui and I had a very fruitful discussion after discussing our fee
 
 The goal is for a person to have a better experience of being alerted of something. The person could either be working an need intermittent breaks, or could be sleeping and need an alternative to horrible sound alarms. There would be two modes, interval mode and specific time mode. After setting up the alarm system, the person would either be reminded to stretch or woken up by sound, smell, and light.
 
-![Storyboard](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/part2_storyboard.jpeg?raw=true)
+![Storyboard](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%201/part2_storyboard.png?raw=true)
 
 **TODO: Summarize feedback you got here.**
 
 ## Part B. Act out the Interaction
 
-Acting this out, I realize the alarm system should be easy to turn on and off, and to switch between modes. I would imagine the user interface in that regard to be similar to a simplistic alarm clock, with the added interval/time toggle button. The device should also be easily moved from a place to another, so it can be taken from a bedroom to an office depending on the need. Acting this through, I realized that having either one device with a lightbuld, an infuser and a sounds system all together might be easier to set up than a device that hooks up to the lights and the sounds system in one's house, even if it is a IoT house. 
+Acting this out, I realize the alarm system should be easy to turn on and off, and to switch between modes. I would imagine the user interface in that regard to be similar to a simplistic alarm clock, with the added interval/time toggle button. The device should also be easily moved from a place to another, so it can be taken from a bedroom to an office depending on the need. Acting this through, I realized that having either one device with a lightbuld, an infuser and a sounds system all together might be easier to set up than a device that hooks up to the lights and the sounds system in one's house, even if it is a IoT house.
+
+There is also the concern of timing for each aspect of the device - should they all start together, or be staggered? Initially I thought everything should start together, but acting it out, I actually think having the infuser start first, then the light, slowly building brightness, then the sounds would be best. 
 
 ## Part C. Prototype the device
 
@@ -171,19 +173,20 @@ See the prototype [here](https://youtu.be/5pBqzC66W-Y).
 
 Since I do not have a smell-prdocuing device, I have simply put essential oils on a flab of the cartboad in the costume. The wizard will have to manually open it (I tried doing it with a string but that ended up tipping the whole thing over...)
 
+At the alert time, the wizard will:
+1) open the smell-latch
+2) turn the light on incrementally
+3) play the gong sound
+
 ## Part E. Costume the device
 
+It should look soothing, and be easy to carry around from one place to another. 
+
 ![Possible Designs](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%201/part2_costume.png?raw=true)
-?raw=true)
-
-
-**What concerns or opportunitities are influencing the way you've designed the device to look?**
-
-It should look soothing, and be easy to carry around from one place to another.
 
 ## Part F. Record
 
-The interection can be viewed below:
+The interection can be viewed below: **TODO: Upload**
 
 **Please indicate anyone you collaborated with on this Lab.**
 
