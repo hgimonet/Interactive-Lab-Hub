@@ -173,11 +173,13 @@ Since I do not have a smell-prdocuing device, I have simply put essential oils o
 
 ## Part E. Costume the device
 
-![Possible Designs](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/part2_costume.jpg?raw=true)
+![Possible Designs](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%201/part2_costume.png?raw=true)
+?raw=true)
 
 
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
 
+It should look soothing, and be easy to carry around from one place to another.
 
 ## Part F. Record
 
