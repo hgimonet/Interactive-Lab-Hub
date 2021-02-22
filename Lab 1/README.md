@@ -78,6 +78,15 @@ Figuring out whento have the progress light turn on it tricky - should it turn o
 
 ## Part C. Prototype the device
 
+
+You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device. 
+
+Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
+
+We invented this tool for this lab! 
+
+If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
+
 **Give us feedback on Tinkerbelle.**
 
 The time lag between the controller and the device is a little distracting, but I love the concept otherwise! Could you also add a probe/blinking option? 
@@ -191,3 +200,4 @@ The interection can be viewed below: **TODO: Upload**
 **Please indicate anyone you collaborated with on this Lab.**
 
 
+**Document everything here. (Particularly we'd like to see the storyboard and video, although photos of the prototype are also great.)**
