@@ -151,42 +151,30 @@ Do last week’s assignment again, but this time:
 
 ## Part A. Plan 
 
-Irene, Nicole, Rui and I had a very fruitful discussion after discussing our feedback. As we were brainstorming ideas, it occured to me that that most alert systems are sound or light-based. I wonder if we could incorporate other senses, such as smell, touch, and even taste into the equation! This led me to imagine spinning off of Irene's concept of wellness breaks with a timed humidifier that is connected to a smart home. The humidifier would, every hour, start extruding a relaxing herbal smell, as well as turn yoga music on, and lower the lights in the room for a 5-minute relaxation session. This could be used by people who work from home, or even in their office, for long periods of time. There could even be a voice or a phone notification encouraging the user to stand up and perform some stretching exercises. 
+Irene, Nicole, Rui and I had a very fruitful discussion after discussing our feedback. As we were brainstorming ideas, it occured to me that that most alert systems are sound or light-based. I wonder if we could incorporate other senses, such as smell, touch, and even taste into the equation! This led me to imagine spinning off of Irene's concept of wellness breaks with a timed humidifier that is connected to a smart home. The humidifier would, every hour, start extruding a relaxing herbal smell, as well as turn yoga music on, and lower the lights in the room for a 5-minute relaxation session. This could be used by people who work from home, or even in their office, for long periods of time. There could even be a voice or a phone notification encouraging the user to stand up and perform some stretching exercises. It could also actually be used as an alarm, since people might either not hear well enough to wake up to a regular alarm, or could simply not respond to sound that well for waking up.
 
+The goal is for a person to have a better experience of being alerted of something. The person could either be working an need intermittent breaks, or could be sleeping and need an alternative to horrible sound alarms. There would be two modes, interval mode and specific time mode. After setting up the alarm system, the person would either be reminded to stretch or woken up by sound, smell, and light.
 
-**Describe your setting, players, activity and goals here.**
+![Storyboard](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/part2_storyboard.jpeg?raw=true)
 
-
-
-**Include a picture of your storyboard here**
-
-
-
-**Summarize feedback you got here.**
-
-
+**TODO: Summarize feedback you got here.**
 
 ## Part B. Act out the Interaction
 
-**Are there things that seemed better on paper than acted out?**
-
-**Are there new ideas that occur to you or your collaborators that come up from the acting?**
-
+Acting this out, I realize the alarm system should be easy to turn on and off, and to switch between modes. I would imagine the user interface in that regard to be similar to a simplistic alarm clock, with the added interval/time toggle button. The device should also be easily moved from a place to another, so it can be taken from a bedroom to an office depending on the need. Acting this through, I realized that having either one device with a lightbuld, an infuser and a sounds system all together might be easier to set up than a device that hooks up to the lights and the sounds system in one's house, even if it is a IoT house. 
 
 ## Part C. Prototype the device
 
-
-
 ## Part D. Wizard the device
 
-**Include your first attempts at recording the set-up video here.**
+See the prototype [here](https://youtu.be/5pBqzC66W-Y).
 
-**Show the follow-up work here.**
-
+Since I do not have a smell-prdocuing device, I have simply put essential oils on a flab of the cartboad in the costume. The wizard will have to manually open it (I tried doing it with a string but that ended up tipping the whole thing over...)
 
 ## Part E. Costume the device
 
-**Include sketches of what your device might look like here.**
+![Possible Designs](https://github.com/hgimonet/Interactive-Lab-Hub/blob/Spring2021/Lab%201/part2_costume.jpg?raw=true)
+
 
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
 
