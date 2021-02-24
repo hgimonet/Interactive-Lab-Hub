@@ -73,13 +73,13 @@ while True:
 
     # Write four lines of text.
     y = top
-    x = int(width/2-font.getsize(first_line)[0])
+    x = int(width/2-font.getsize(first_line)[0]/2)
     draw.text((x, y), first_line, font=font, fill="#FFFFFF")
     y += font.getsize(first_line)[1]
-    x = int(width/2-font.getsize(date_now)[0])
+    x = int(width/2-font.getsize(date_now)[0]/2)
     draw.text((x, y), date_now, font=font, fill="#FFFF00")
     y += font.getsize(date_now)[1]
-    x = int(width/2-font.getsize(time_now)[0])
+    x = int(width/2-font.getsize(time_now)[0]/2)
     draw.text((x, y), time_now, font=font, fill="#FFFF00")
 
     # Display image.
