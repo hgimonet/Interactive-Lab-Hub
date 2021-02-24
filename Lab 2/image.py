@@ -74,28 +74,69 @@ draw = ImageDraw.Draw(image)
 draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
 disp.image(image)
 
-image = Image.open("red.jpg")
-backlight = digitalio.DigitalInOut(board.D22)
-backlight.switch_to_output()
-backlight.value = True
+# image = Image.open("red.jpg")
+# backlight = digitalio.DigitalInOut(board.D22)
+# backlight.switch_to_output()
+# backlight.value = True
+#
+#
+# # Scale the image to the smaller screen dimension
+# image_ratio = image.width / image.height
+# screen_ratio = width / height
+# if screen_ratio < image_ratio:
+#     scaled_width = image.width * height // image.height
+#     scaled_height = height
+# else:
+#     scaled_width = width
+#     scaled_height = image.height * width // image.width
+# image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+#
+# # Crop and center the image
+# x = scaled_width // 2 - width // 2
+# y = scaled_height // 2 - height // 2
+# image = image.crop((x, y, x + width, y + height))
+#
+# # Display image.
+# disp.image(image)
 
+def diplay_img(path):
+    image = Image.open(path)
+    backlight = digitalio.DigitalInOut(board.D22)
+    backlight.switch_to_output()
+    backlight.value = True
 
-# Scale the image to the smaller screen dimension
-image_ratio = image.width / image.height
-screen_ratio = width / height
-if screen_ratio < image_ratio:
-    scaled_width = image.width * height // image.height
-    scaled_height = height
-else:
-    scaled_width = width
-    scaled_height = image.height * width // image.width
-image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+    # Scale the image to the smaller screen dimension
+    image_ratio = image.width / image.height
+    screen_ratio = width / height
+    if screen_ratio < image_ratio:
+        scaled_width = image.width * height // image.height
+        scaled_height = height
+    else:
+        scaled_width = width
+        scaled_height = image.height * width // image.width
+    image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
 
-# Crop and center the image
-x = scaled_width // 2 - width // 2
-y = scaled_height // 2 - height // 2
-image = image.crop((x, y, x + width, y + height))
+    # Crop and center the image
+    x = scaled_width // 2 - width // 2
+    y = scaled_height // 2 - height // 2
+    image = image.crop((x, y, x + width, y + height))
 
-# Display image.
-disp.image(image)
+    # Display image.
+    disp.image(image)
 
+# Hortense Edit: Get the image to change while button is pressed
+
+buttonA = digitalio.DigitalInOut(board.D23)
+buttonB = digitalio.DigitalInOut(board.D24)
+buttonA.switch_to_input()
+buttonB.switch_to_input()
+
+while True:
+    if buttonA.value and buttonB.value:
+        diplay_img('red.jpg')
+    if buttonB.value and not buttonA.value:  # just button A pressed
+        diplay_img('domino.jpg')
+    if buttonA.value and not buttonB.value:  # just button B pressed
+        diplay_img('panda.jpg')
+    if not buttonA.value and not buttonB.value:  # both pressed
+        diplay_img('lion.jpg')
