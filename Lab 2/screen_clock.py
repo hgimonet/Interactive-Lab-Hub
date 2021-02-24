@@ -65,7 +65,16 @@ while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
-    #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
+    #TODO: fill in here. You should be able to look in cli_clock.py and stats.py
+
+    date_now = time.strftime("%m/%d/%Y")
+    time_now = time.strftime("%H:%M:%S")
+
+    # Write four lines of text.
+    y = top
+    draw.text((x, y), date_now, font=font, fill="#FFFFFF")
+    y += font.getsize(date_now)[1]
+    draw.text((x, y), time_now, font=font, fill="#FFFF00")
 
     # Display image.
     disp.image(image, rotation)

@@ -99,6 +99,8 @@ disp.image(image)
 # # Display image.
 # disp.image(image)
 
+# Hortense Edit: Get the image to change while button is pressed
+
 def diplay_img(path):
     image = Image.open(path)
     backlight = digitalio.DigitalInOut(board.D22)
@@ -124,15 +126,13 @@ def diplay_img(path):
     # Display image.
     disp.image(image)
 
-# Hortense Edit: Get the image to change while button is pressed
-
 buttonA = digitalio.DigitalInOut(board.D23)
 buttonB = digitalio.DigitalInOut(board.D24)
 buttonA.switch_to_input()
 buttonB.switch_to_input()
 
 while True:
-    if buttonA.value and buttonB.value:
+    if buttonA.value and buttonB.value:  # neither pressed
         diplay_img('red.jpg')
     if buttonB.value and not buttonA.value:  # just button A pressed
         diplay_img('domino.jpg')
