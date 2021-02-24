@@ -195,9 +195,8 @@ It should look soothing, and be easy to carry around from one place to another.
 
 ## Part F. Record
 
-The interection can be viewed below: **TODO: Upload**
+The interaction can be viewed [here](https://youtu.be/HSQ0PC9_9h8).
 
-**Please indicate anyone you collaborated with on this Lab.**
-
+I want to thank Irene, Rui and Nicole for getting the creative juices flowing in class, and my husband Abraham for being my wizard/camera person!
 
 **Document everything here. (Particularly we'd like to see the storyboard and video, although photos of the prototype are also great.)**
