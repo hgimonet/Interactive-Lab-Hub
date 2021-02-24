@@ -1,7 +1,7 @@
 # Parts list inventory
 
 
-| Parts	| Here | Adafruit # | Description |
+| Parts	| Here | Adafruit # | Description / Notes |
 | :--- | :---: | :---: |  ---: |
 | [Raspberry. Pi 4 with 4GB](https://www.adafruit.com/product/) | yes | | |
 | [Case](https://www.adafruit.com/product/4301) | yes | | |
