@@ -70,23 +70,35 @@ buttonB.switch_to_input()
 
 bg_color = 'black'
 
+first_line = "A: start/stop, B: lap, A+B: reset"
+
 timer_secs = 0
 timer_on = False
+lap = ""
+
+def print_text(text, y):
+    x = int(width / 2 - font.getsize(text)[0] / 2)
+    # draw.text((x, y), time_now, font=font, fill="#FFFFFF")
+    y += font.getsize(text)[1]
 
 while True:
-    # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)
-    if buttonB.value and not buttonA.value:  # just button A pressed
-        timer_on = True
-    if buttonA.value and not buttonB.value:  # just button B pressed
-        timer_on = False
-    if not buttonA.value and not buttonB.value:  # both pressed
-        timer_secs = 0  # reset timer
 
-    first_line = "Pi Clock"
     date_now = time.strftime("%m/%d/%Y")
     time_now = time.strftime("%H:%M:%S")
     timer_now = time.strftime("%H:%M:%S",time.gmtime(timer_secs))
+
+    # Draw a black filled box to clear the image.
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    if buttonB.value and not buttonA.value:  # just button A pressed
+        timer_on = not timer_on
+    if buttonA.value and not buttonB.value:  # just button B pressed
+        lap = timer_now  # save the current timer time
+    if not buttonA.value and not buttonB.value:  # both pressed
+        timer_secs = 0  # reset timer
+        lap = ""  # reset lap
+
+    if timer_on:
+        timer_secs += 1
 
     # Write four lines of text.
     y = top
@@ -94,9 +106,9 @@ while True:
     draw.text((x, y), first_line, font=font, fill="#FFFFFF")
     y += font.getsize(first_line)[1]
 
-    x = int(width/2-font.getsize(date_now)[0]/2)
-    draw.text((x, y), date_now, font=font, fill="#FFFFFF")
-    y += font.getsize(date_now)[1]
+    # x = int(width/2-font.getsize(date_now)[0]/2)
+    # draw.text((x, y), date_now, font=font, fill="#FFFFFF")
+    # y += font.getsize(date_now)[1]
 
     x = int(width/2-font.getsize(time_now)[0]/2)
     draw.text((x, y), time_now, font=font, fill="#FFFFFF")
@@ -104,8 +116,11 @@ while True:
 
     x = int(width/2-font.getsize(timer_now)[0]/2)
     draw.text((x, y), timer_now, font=font, fill="#FFFF00")
+    y += font.getsize(timer_now)[1]
+
+    x = int(width / 2 - font.getsize(lap)[0] / 2)
+    draw.text((x, y), lap, font=font, fill="#FFFFFF")
 
     # Display image.
     disp.image(image, rotation)
     time.sleep(1)
-    timer_secs +=1

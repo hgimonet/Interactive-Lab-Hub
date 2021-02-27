@@ -165,13 +165,19 @@ git push
 
 After that git will ask you to login to your github account to upload.
 
+See `timer.py`. Push the A button to start or stop the timer, the B button to lap, and both buttons to reset.
+
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
 
 **Take a video of your PiClock.**
 
+TODO
+
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
-
-
+- I wanted to make a digital hourglass, but after some research, the coding required would be extensive
+- Use nobs and sound output to make a timer that rings
+- maybe something similar to the t-rex obstacle course on google chrome?
+- 
