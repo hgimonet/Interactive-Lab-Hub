@@ -70,16 +70,13 @@ buttonB.switch_to_input()
 
 bg_color = 'black'
 
-first_line = "A: start/stop, B: lap, A+B: reset"
+first_line = "A: start/stop,"
+second_line = "B: lap, A+B: reset"
 
 timer_secs = 0
 timer_on = False
 lap = ""
 
-def print_text(text, y):
-    x = int(width / 2 - font.getsize(text)[0] / 2)
-    # draw.text((x, y), time_now, font=font, fill="#FFFFFF")
-    y += font.getsize(text)[1]
 
 while True:
 
@@ -100,11 +97,16 @@ while True:
     if timer_on:
         timer_secs += 1
 
-    # Write four lines of text.
+    # Write  lines of text.
+
     y = top
-    x = int(width/2-font.getsize(first_line)[0]/2)
-    draw.text((x, y), first_line, font=font, fill="#FFFFFF")
-    y += font.getsize(first_line)[1]
+
+    lines = [first_line, second_line]
+
+    for text in lines:
+        x = int(width / 2 - font.getsize(text)[0] / 2)
+        draw.text((x, y), text, font=font, fill="#FFFFFF")
+        y += font.getsize(text)[1]
 
     # x = int(width/2-font.getsize(date_now)[0]/2)
     # draw.text((x, y), date_now, font=font, fill="#FFFFFF")
