@@ -170,9 +170,7 @@ See `timer.py`. Push the A button to start or stop the timer, the B button to la
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
 
-**Take a video of your PiClock.**
-
-TODO
+See video of my PiChronomater [here](https://youtu.be/KWhlTXadzzY). For code, see [`timer.py`](timer.py).
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
