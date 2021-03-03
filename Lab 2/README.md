@@ -178,4 +178,5 @@ See video of my PiChronomater [here](https://youtu.be/KWhlTXadzzY). For code, se
 - I wanted to make a digital hourglass, but after some research, the coding required would be extensive
 - Use nobs and sound output to make a timer that rings
 - maybe something similar to the t-rex obstacle course on google chrome?
-- 
+
+![Skteches](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%202/sketches.png?raw=true)
