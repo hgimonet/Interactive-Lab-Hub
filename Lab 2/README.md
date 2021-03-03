@@ -63,7 +63,7 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 
 ## Part A. 
 ## Connect to your Pi
-Just like you did in the lab prep, ssh on to your pi. Once there create a Python environment.
+Just like you did in the lab prep, ssh on to your pi. Once there create a python environment.
 
 ```
 ssh pi@ixe00
@@ -91,7 +91,7 @@ Install the packages from the requirements.txt and run the example
 02/24/2021 11:20:49
 ```
 you can press `ctrl-c` to exit.
-If you're unfamiliar with the Python code in `cli_clock.py` have a look at [this Python refresher](https://hackernoon.com/intermediate-python-refresher-tutorial-project-ideas-and-tips-i28s320p). If you're still concerned, please reach out to the teaching staff!
+If you're unfamiliar with the code in `cli_clock.py` have a look at [this refresher](https://hackernoon.com/intermediate-python-refresher-tutorial-project-ideas-and-tips-i28s320p). If you're still concerned please reach out to the teaching staff!
 
 
 ## Part C. 
@@ -126,7 +126,7 @@ We can test it by typing
 python screen_test.py
 ```
 
-You can type the name of a color then press either of the buttons to see what happens on the display. Take a look at the code with
+You can type the name of a color then press either of the buttons to see what happens on the display. take a look at the code with
 ```
 cat screen_test.py
 ```
@@ -155,7 +155,7 @@ Can you make time interactive? You can look in `screen_test.py` for examples for
 
 **A copy of your code should be in your Lab 2 Github repo.**
 
-You can push to your personal github repo by adding the files here, commiting and pushing.
+you can push to your personal github repo by adding the files here, commiting and pushing.
 
 ```
 git add .
@@ -165,19 +165,17 @@ git push
 
 After that git will ask you to login to your github account to upload.
 
+See `timer.py`. Push the A button to start or stop the timer, the B button to lap, and both buttons to reset.
+
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
 
-**Take a video of your PiClock.**
+See video of my PiChronomater [here](https://youtu.be/KWhlTXadzzY). For code, see [`timer.py`](timer.py).
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
-## Prep for Part 2
-
-Pick up remaining parts for kit.
-
-Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
-
-
-
+- I wanted to make a digital hourglass, but after some research, the coding required would be extensive
+- Use nobs and sound output to make a timer that rings
+- maybe something similar to the t-rex obstacle course on google chrome?
+- 
