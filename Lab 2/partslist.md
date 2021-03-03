@@ -1,8 +1,8 @@
 # Parts list inventory
 
 
-| Parts	| Here | Adafruit # | Description / Notes |
-| :--- | :---: | :---: |  ---: |
+| Parts	| Here | Adafruit # | API | Description / Notes |
+| :--- | :---: | :---: | :---: |  ---: |
 | [Raspberry. Pi 4 with 4GB](https://www.adafruit.com/product/) | yes | | |
 | [Case](https://www.adafruit.com/product/4301) | yes | | |
 | [Power supply](https://www.adafruit.com/product/4298) | yes | | |
@@ -15,7 +15,7 @@
 | [Gator Capacitive Touch Sensor Breakout](https://www.adafruit.com/product/4830) | yes | MPR121 | |
 | [Web camera](https://www.adafruit.com/product/3099) | yes | | |
 | [Encoder](https://www.sparkfun.com/products/15083) | yes | | |
-| [Button/led green](https://www.sparkfun.com/products/16842) | yes | | |
+| [Button/led green](https://www.sparkfun.com/products/16842) | yes | [Python](https://qwiic-button-py.readthedocs.io/en/main/apiref.html)| |
 | [Button/led red](https://www.sparkfun.com/products/15932) | yes | | |
 | [OLED screen](https://www.sparkfun.com/products/17153) | yes | | |
 | [LED stick](https://www.sparkfun.com/products/14783) | no | |  |
