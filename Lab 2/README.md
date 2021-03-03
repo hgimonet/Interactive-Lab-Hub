@@ -145,6 +145,7 @@ You can look in `image.py` for an example of how to display an image on the scre
 
 In `screen_clock.py`. Show the time by filling in the while loop. You can use the code in `cli_clock.py` and `stats.py` to figure this out.
 
+See code [here](screen_clock.py).
 
 ## Part E.
 ## Modify the barebones clock to make it your own
