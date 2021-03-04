@@ -1,5 +1,5 @@
 
-Pi Login: `pi@192.168.1.77`
+Pi Login: `ssh pi@192.168.1.77`
 Pw Hint: constant
 
 To update labs: 
