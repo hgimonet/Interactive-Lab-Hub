@@ -166,7 +166,7 @@ git push
 
 After that, git will ask you to login to your github account to upload.
 
-See `timer.py`. Push the A button to start or stop the timer, the B button to lap, and both buttons to reset.
+See [`timer.py`](timer.py). Push the A button to start or stop the timer, the B button to lap, and both buttons to reset.
 
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
@@ -174,6 +174,8 @@ See `timer.py`. Push the A button to start or stop the timer, the B button to la
 **Take a video of your PiClock.**
 
 See video of my PiChronometer [here](https://youtu.be/KWhlTXadzzY). For code, see [`timer.py`](timer.py).
+
+[![Timer Demo Video](http://img.youtube.com/vi/KWhlTXadzzY/0.jpg)](http://www.youtube.com/watch?v=KWhlTXadzzY "Timer Demo")
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
