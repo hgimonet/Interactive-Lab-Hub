@@ -202,4 +202,10 @@ As always, make sure you document contributions and ideas from others explicitly
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
+## Wacky Relativity Clock
 
+### Rationale
+Although the hour glass simulation looked really hard to do, I really wanted to use the gyro/accelerometer sensor in our kit! I was trying to think of ways a gyro sensor could be useful for a clock, and at first I only though of flipping- or shaking-induced actions from the clock. After some brainstorming, I remembered this super cool thing called [time dialation](https://en.wikipedia.org/wiki/Time_dilation). What if my clock slowed down or sped up depending on the speed percieved by the accelerometer, just like time slows down when moving at the speed of light? I have thus decided to make a [wacky relativity clock](Lab 2/wacky_relativity.py).
+
+### Demo
+**TODO**
