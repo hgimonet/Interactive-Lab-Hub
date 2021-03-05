@@ -8,6 +8,7 @@ import adafruit_rgb_display.st7789 as st7789
 # for gyrometer
 import busio
 import adafruit_mpu6050
+from math import sqrt
 
 # Configuration for gyrometer
 i2c = busio.I2C(board.SCL, board.SDA)
@@ -84,6 +85,8 @@ timer_secs = 0
 timer_on = False
 lap = ""
 
+def relativity(dt,v,c=2.99792458e3):
+    return dt / sqrt(1-v**2/c**2)
 
 while True:
 
