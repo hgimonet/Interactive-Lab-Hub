@@ -166,7 +166,7 @@ git push
 
 After that, git will ask you to login to your github account to upload.
 
-See `timer.py`. Push the A button to start or stop the timer, the B button to lap, and both buttons to reset.
+See [`timer.py`](timer.py). Push the A button to start or stop the timer, the B button to lap, and both buttons to reset.
 
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
@@ -174,6 +174,8 @@ See `timer.py`. Push the A button to start or stop the timer, the B button to la
 **Take a video of your PiClock.**
 
 See video of my PiChronometer [here](https://youtu.be/KWhlTXadzzY). For code, see [`timer.py`](timer.py).
+
+[![Timer Demo Video](http://img.youtube.com/vi/KWhlTXadzzY/0.jpg)](http://www.youtube.com/watch?v=KWhlTXadzzY "Timer Demo")
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
@@ -202,4 +204,13 @@ As always, make sure you document contributions and ideas from others explicitly
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
+## Wacky Relativity Clock
 
+### Rationale
+Although the hour glass simulation looked really hard to do, I really wanted to use the gyro/accelerometer sensor in our kit! I was trying to think of ways a gyro sensor could be useful for a clock, and at first I only though of flipping- or shaking-induced actions from the clock. After some brainstorming, I remembered this super cool thing called [time dialation](https://en.wikipedia.org/wiki/Time_dilation). What if my clock slowed down or sped up depending on the speed percieved by the accelerometer, just like time slows down when moving at the speed of light? I have thus decided to make a [wacky relativity clock](wacky_relativity.py).
+
+### Demo
+
+Watch the demo video below:
+
+**TODO**
