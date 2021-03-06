@@ -5,14 +5,18 @@ from PIL import Image, ImageDraw, ImageFont
 import digitalio
 import board
 import adafruit_rgb_display.st7789 as st7789
-# for gyrometer
+# for accelerometer
 import busio
 import adafruit_mpu6050
+# for calculating velocity
+import numpy as np
 from math import sqrt
 
 # Configuration for gyrometer
 i2c = busio.I2C(board.SCL, board.SDA)
 mpu = adafruit_mpu6050.MPU6050(i2c)
+# reset mpu
+mpu.reset()
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
@@ -85,10 +89,17 @@ timer_secs = 0
 timer_on = False
 lap = ""
 
+# set the refresh time
+dt = 0.001
+v = np.zeros(3)
+
 def relativity(dt,v,c=2.99792458e3):
     return dt / sqrt(1-v**2/c**2)
 
 while True:
+    # calculate velocity
+    v += np.array(mpu.acceleration)*dt
+    speed = np.linalg.norm(v)
 
     date_now = time.strftime("%m/%d/%Y")
     time_now = time.strftime("%H:%M:%S")
@@ -96,6 +107,7 @@ while True:
 
 
     acceleration = "Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(mpu.acceleration)
+    velocity = "Speed: X:%.2f, Y: %.2f, Z: %.2f m/s^2" %(tuple(v))
     gyro = "Gyro X:%.2f, Y: %.2f, Z: %.2f degrees/s"%(mpu.gyro)
     temp = "Temperature: %.2f C"%mpu.temperature
 
@@ -116,33 +128,13 @@ while True:
 
     y = top
 
-    lines = [first_line, second_line]
+    lines = [acceleration, velocity]
 
     for text in lines:
         x = int(width / 2 - font.getsize(text)[0] / 2)
         draw.text((x, y), text, font=font, fill="#FFFFFF")
         y += font.getsize(text)[1]
 
-    # x = int(width/2-font.getsize(date_now)[0]/2)
-    # draw.text((x, y), date_now, font=font, fill="#FFFFFF")
-    # y += font.getsize(date_now)[1]
-
-    x = int(width/2-font.getsize(time_now)[0]/2)
-    draw.text((x, y), time_now, font=font, fill="#FFFFFF")
-    y += font.getsize(time_now)[1]
-
-    x = int(width/2-font.getsize(timer_now)[0]/2)
-    draw.text((x, y), timer_now, font=font, fill="#FFFF00")
-    y += font.getsize(timer_now)[1]
-
-    x = int(width / 2 - font.getsize(lap)[0] / 2)
-    draw.text((x, y), lap, font=font, fill="#FFFFFF")
-    y += font.getsize(lap)[1]
-
-    print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(mpu.acceleration))
-    print("Gyro X:%.2f, Y: %.2f, Z: %.2f degrees/s"%(mpu.gyro))
-    print("Temperature: %.2f C"%mpu.temperature)
-
     # Display image.
     disp.image(image, rotation)
-    time.sleep(1)
+    time.sleep(dt)
