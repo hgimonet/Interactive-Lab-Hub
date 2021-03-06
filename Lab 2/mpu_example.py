@@ -17,7 +17,7 @@ while True:
     speed = np.linalg.norm(v)
 
     print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(mpu.acceleration))
-    print("Speed: X:%.2f, Y: %.2f, Z: %.2f m/s^2" %v)
+    print("Speed: X:%.2f, Y: %.2f, Z: %.2f m/s^2" %(tuple(v)))
     print("Gyro X:%.2f, Y: %.2f, Z: %.2f degrees/s"%(mpu.gyro))
     print("Temperature: %.2f C"%mpu.temperature)
     print("")
