@@ -7,9 +7,10 @@ import numpy as np
 i2c = busio.I2C(board.SCL, board.SDA)
 mpu = adafruit_mpu6050.MPU6050(i2c)
 
+mpu.reset()
 
 v = np.zeros(3)
-dt = 1
+dt = 0.010
 
 while True:
     # calculate velocity
