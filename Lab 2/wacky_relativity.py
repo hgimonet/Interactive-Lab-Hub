@@ -90,7 +90,7 @@ timer_on = False
 lap = ""
 
 # set the refresh time
-dt = 0.001
+dt = 0.01
 v = np.zeros(3)
 
 def relativity(dt,v,c=2.99792458e3):
@@ -106,8 +106,8 @@ while True:
     timer_now = time.strftime("%H:%M:%S",time.gmtime(timer_secs))
 
 
-    acceleration = "Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(mpu.acceleration)
-    velocity = "Speed: X:%.2f, Y: %.2f, Z: %.2f m/s^2" %(tuple(v))
+    acceleration = "a: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(mpu.acceleration)
+    velocity = "v: X:%.2f, Y: %.2f, Z: %.2f m/s^2" %(tuple(v))
     gyro = "Gyro X:%.2f, Y: %.2f, Z: %.2f degrees/s"%(mpu.gyro)
     temp = "Temperature: %.2f C"%mpu.temperature
 
@@ -125,11 +125,8 @@ while True:
         timer_secs += 1
 
     # Write  lines of text.
-
-    y = top
-
     lines = [acceleration, velocity]
-
+    y = top
     for text in lines:
         x = int(width / 2 - font.getsize(text)[0] / 2)
         draw.text((x, y), text, font=font, fill="#FFFFFF")
