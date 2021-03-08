@@ -85,7 +85,7 @@ bg_color = 'black'
 accel_old = np.zeros(3)
 
 # set the refresh time
-dt = 0.001
+dt = 0.1
 vel = np.zeros(3)
 
 accel_offsets = [ 0.82114222, -0.13894366,  7.9939099 ]
