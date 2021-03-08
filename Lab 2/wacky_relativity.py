@@ -109,7 +109,7 @@ while True:
 
     if buttonB.value and not buttonA.value:  # just button A pressed
         relative_time = 0
-        start_time = datetime.time.now()
+        start_time = datetime.datetime.now()
     # if buttonA.value and not buttonB.value:  # just button B pressed
     #     relative_on = not relative_on
     # if not buttonA.value and not buttonB.value:  # both pressed
