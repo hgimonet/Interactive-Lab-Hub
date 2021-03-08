@@ -209,7 +209,7 @@ You are permitted (but not required) to work in groups and share a turn in; you 
 ## Wacky Relativity Clock
 
 ### Rationale
-Although the hour glass simulation looked really hard to do, I really wanted to use the gyro/accelerometer sensor in our kit! I was trying to think of ways a gyro sensor could be useful for a clock, and at first I only though of flipping- or shaking-induced actions from the clock. After some brainstorming, I remembered this super cool thing called [time dialation](https://en.wikipedia.org/wiki/Time_dilation). What if my clock slowed down or sped up depending on the speed percieved by the accelerometer, just like time slows down when moving at the speed of light? I have thus decided to make a [wacky relativity clock](wacky_relativity.py).
+Although the hour glass simulation looked really hard to do, I really wanted to use the gyro/accelerometer sensor in our kit! I was trying to think of ways a gyro sensor could be useful for a clock, and at first I only though of flipping- or shaking-induced actions from the clock. After some brainstorming, I remembered this super cool thing called [time dialation](https://en.wikipedia.org/wiki/Time_dilation). What if my clock slowed down up depending on the speed percieved by the accelerometer, just like time slows down when moving at the speed of light? I have thus decided to make a [wacky relativity clock](wacky_relativity.py).
 
 
 ### Process
@@ -290,12 +290,22 @@ averaging 10000 readings each time
 -------------- done --------------
 ```
 
-As it turns out, these outputs aren't compatible with the python API, so I tried writing my own calibration by simply averaging measurements over 5 seconds (see code [here](mpu_calibrate.py)). 
+~~As it turns out, these outputs aren't compatible with the python API, so I tried writing my own calibration by simply averaging measurements over 5 seconds (see code [here](mpu_calibrate.py)). 
+~~
+
+Actually, turns out my sensor does not need to be calibrated, as the number I was seeing was gravity, oops!
+
 
 #### Using the MPU
 
-So in theory, v = a * dt, so I though if I had a velocity counter in the while loop, I could have an approximation for speed.
+So in theory, velocity is acceleration  so I though if I had a velocity counter in the while loop, I could have an approximation for speed.
 
+After some trial and error, I realized that in practice, [finding velocity from from acceleration is not that simple](http://www.chrobotics.com/library/accel-position-velocity). 
+You need to first remove gravity from the accelerometer data using the gyroscope for the correct angle. You can also run into issues if the intervals at which you are checking the acceleration is such that you miss the movement -- this can be partially fixed with a high-pass filter.
+
+Of course, getting this all working requires basically building an [IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit)... 
+
+For simplicity, I am therefore going to assume the sensor will only be moving in the x-y plane, with no rotations (no gravity, yay!).
 
 ### Demo
 

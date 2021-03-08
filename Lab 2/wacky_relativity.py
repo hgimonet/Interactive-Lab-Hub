@@ -106,18 +106,18 @@ def relativity(dt,v,c=2.99792458e3):
 
 while True:
 
-
     if buttonB.value and not buttonA.value:  # just button A pressed
         relative_time = 0
         start_time = datetime.datetime.now()
     # if buttonA.value and not buttonB.value:  # just button B pressed
-    #     relative_on = not relative_on
     # if not buttonA.value and not buttonB.value:  # both pressed
 
     accel = np.array(mpu.acceleration) #- accel_offsets
     gyro = np.array(mpu.gyro) #- gyro_offsets
+
     # calculate velocity assuming accel gives displacement
     vel = (accel_old - accel)/(dt)
+    # vel += accel*dt
     speed = np.linalg.norm(vel)
 
     date_now = time.strftime("%m/%d/%Y")
