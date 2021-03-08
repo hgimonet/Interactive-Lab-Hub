@@ -113,13 +113,14 @@ while True:
     acceleration = "a: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(tuple(accel))
     velocity = "v: X:%.2f, Y: %.2f, Z: %.2f m/s" %(tuple(vel))
     gyro = "Gyro X:%.2f, Y: %.2f, Z: %.2f degrees/s"%(tuple(gyro))
+    speed_print = "Speed: %.2f m/s"%(speed)
     # temp = "Temperature: %.2f C"%mpu.temperature
 
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     # Write  lines of text.
-    lines = [acceleration, velocity]
+    lines = [acceleration, velocity, speed_print]
     y = top
     for text in lines:
         x = int(width / 2 - font.getsize(text)[0] / 2)
