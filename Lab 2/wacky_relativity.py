@@ -82,28 +82,28 @@ buttonB.switch_to_input()
 
 bg_color = 'black'
 
+# initialize old acceleration
 accel_old = np.zeros(3)
+vel = np.zeros(3)
 
 # set the refresh time
 dt = 1
-vel = np.zeros(3)
 
+# initilize offsets
 accel_offsets = [ 0.82114222, -0.13894366,  7.9939099 ]
 gyro_offsets = [-2.36665191, -0.4468687,  -0.18727176]
 
-# mpu.accelerometer_range = adafruit_mpu6050.Range.RANGE_2_G
-
 mpu.reset()
 mpu.sleep = False
+mpu.cycle = False
 
 def relativity(dt,v,c=2.99792458e3):
     return dt / sqrt(1-v**2/c**2)
 
 while True:
-
     accel = np.array(mpu.acceleration) #- accel_offsets
     gyro = np.array(mpu.gyro) #- gyro_offsets
-    # calculate velocity
+    # calculate velocity assuming accel gives displacement
     vel = (accel_old - accel)/(dt)
     speed = np.linalg.norm(vel)
 
