@@ -9,7 +9,7 @@ mpu = adafruit_mpu6050.MPU6050(i2c)
 
 # mpu.reset()
 
-dt=0.01
+dt=0.001
 secs = 5.0
 num_measurements = int(secs/dt)
 count = 0
