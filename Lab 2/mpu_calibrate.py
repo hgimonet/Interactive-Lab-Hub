@@ -20,12 +20,12 @@ while count < num_measurements:
     print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(mpu.acceleration))
     accel_recordings.append(np.array(mpu.acceleration))
     gyro_recordings.append(np.array(mpu.gyro))
-    print(accel_recordings[-1])
     time.sleep(dt)
     count +=1
 
 accel_recordings = np.array(accel_recordings)
-print(accel_recordings.shape)
+print(accel_recordings.mean(axis=1))
+print(gyro_recordings.mean(axis=1))
 
 # while True:
 #     print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(mpu.acceleration))
