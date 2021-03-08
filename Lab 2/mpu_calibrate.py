@@ -9,13 +9,15 @@ mpu = adafruit_mpu6050.MPU6050(i2c)
 
 # mpu.reset()
 
-dt=0.01
-num_measurements = int(5.0/dt)
+dt=0.001
+secs = 10.0
+num_measurements = int(secs/dt)
 count = 0
 
 accel_recordings = []
 gyro_recordings = []
 
+print('Will measure for %.1f seconds, do not move sensor.'%(secs))
 while count < num_measurements:
     # print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(mpu.acceleration))
     accel_recordings.append(np.array(mpu.acceleration))
