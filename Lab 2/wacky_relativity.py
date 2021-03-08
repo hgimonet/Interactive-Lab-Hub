@@ -1,4 +1,4 @@
-import time
+import time, datetime
 import subprocess
 from PIL import Image, ImageDraw, ImageFont
 # for screen display
@@ -97,10 +97,22 @@ mpu.reset()
 mpu.sleep = False
 mpu.cycle = True
 
+relative_time = 0
+relative_on = False
+
 def relativity(dt,v,c=2.99792458e3):
     return dt / sqrt(1-v**2/c**2)
 
 while True:
+
+
+    if buttonB.value and not buttonA.value:  # just button A pressed
+        relative_time = 0
+        start_time = datetime.time.now()
+    # if buttonA.value and not buttonB.value:  # just button B pressed
+    #     relative_on = not relative_on
+    # if not buttonA.value and not buttonB.value:  # both pressed
+
     accel = np.array(mpu.acceleration) #- accel_offsets
     gyro = np.array(mpu.gyro) #- gyro_offsets
     # calculate velocity assuming accel gives displacement
@@ -109,6 +121,7 @@ while True:
 
     date_now = time.strftime("%m/%d/%Y")
     time_now = time.strftime("%H:%M:%S")
+    time_relative = (start_time + datetime.timedelta(seconds = dt)).strftime("%H:%M:%S")
 
     acceleration = "a: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(tuple(accel))
     velocity = "v: X:%.2f, Y: %.2f, Z: %.2f m/s" %(tuple(vel))
@@ -120,7 +133,7 @@ while True:
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     # Write  lines of text.
-    lines = [acceleration, velocity, speed_print]
+    lines = [acceleration, velocity, speed_print, time_now, time_relative]
     y = top
     for text in lines:
         x = int(width / 2 - font.getsize(text)[0] / 2)
@@ -130,5 +143,5 @@ while True:
     # Display image.
     disp.image(image, rotation)
     time.sleep(dt)
-
+    relative_time += relativity(dt,speed)
     accel_old = accel

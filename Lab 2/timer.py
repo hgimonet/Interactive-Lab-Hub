@@ -86,6 +86,7 @@ while True:
 
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
+
     if buttonB.value and not buttonA.value:  # just button A pressed
         timer_on = not timer_on
     if buttonA.value and not buttonB.value:  # just button B pressed
