@@ -22,6 +22,7 @@ while count < num_measurements:
     gyro_recordings.append(np.array(mpu.gyro))
     print(accel_recordings[-1])
     time.sleep(dt)
+    count +=1
 
 accel_recordings = np.array(accel_recordings)
 print(accel_recordings.shape)
