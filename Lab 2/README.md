@@ -1,3 +1,5 @@
+Note: I got into an accident yesterday and I wasn't able to get my clock working with the accelerometer yet (thus no demo).
+
 # The Clock of Pi
 
 Does it feel like time is moving strangely during the pandemic?
