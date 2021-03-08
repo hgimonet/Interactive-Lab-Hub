@@ -209,6 +209,86 @@ You are permitted (but not required) to work in groups and share a turn in; you 
 ### Rationale
 Although the hour glass simulation looked really hard to do, I really wanted to use the gyro/accelerometer sensor in our kit! I was trying to think of ways a gyro sensor could be useful for a clock, and at first I only though of flipping- or shaking-induced actions from the clock. After some brainstorming, I remembered this super cool thing called [time dialation](https://en.wikipedia.org/wiki/Time_dilation). What if my clock slowed down or sped up depending on the speed percieved by the accelerometer, just like time slows down when moving at the speed of light? I have thus decided to make a [wacky relativity clock](wacky_relativity.py).
 
+
+### Process
+
+#### MPU6050 Calibration
+First, I had to calibrate the MPU6050. After trying (and failing) to do so with the pi, I decided to use an Arduino UNO since the tutorials were more straightforward. I hooked the MPU6050 to a UNO plugged into my laptop using the Arduino configuration in (this manual)[https://cdn-learn.adafruit.com/downloads/pdf/mpu6050-6-dof-accelerometer-and-gyro.pdf]. 
+
+See the setup below:
+
+![UNO MPU6050 Setup](mpu_calibration/uno_setup.jpg)
+
+I then followed (this tutorial)[https://www.instructables.com/MPU6050-Setup-and-Calibration-Guide/] to find the optimal offsets.
+
+I got the following output:
+
+```
+Initializing I2C devices...
+Testing device connections...
+MPU6050 connection successful
+PID tuning Each Dot = 100 readings
+>......>......
+at 600 Readings
+
+//           X Accel  Y Accel  Z Accel   X Gyro   Y Gyro   Z Gyro
+//OFFSETS     3671,    2067,    1760,      79,      14,       7
+
+>.>.700 Total Readings
+
+//           X Accel  Y Accel  Z Accel   X Gyro   Y Gyro   Z Gyro
+//OFFSETS     3671,    2067,    1758,      78,      14,       7
+
+>.>.800 Total Readings
+
+//           X Accel  Y Accel  Z Accel   X Gyro   Y Gyro   Z Gyro
+//OFFSETS     3671,    2067,    1758,      78,      14,       8
+
+>.>.900 Total Readings
+
+//           X Accel  Y Accel  Z Accel   X Gyro   Y Gyro   Z Gyro
+//OFFSETS     3671,    2067,    1758,      79,      13,       6
+
+>.>.1000 Total Readings
+
+//           X Accel  Y Accel  Z Accel   X Gyro   Y Gyro   Z Gyro
+//OFFSETS     3673,    2067,    1758,      79,      14,       7
+
+
+ Any of the above offsets will work nice 
+
+ Lets proof the PID tuning using another method:
+averaging 1000 readings each time
+expanding:
+....	XAccel			YAccel				ZAccel			XGyro			YGyro			ZGyro
+ [0,0] --> [-30741,-30743]	[0,0] --> [-18079,-18080]	[0,0] --> [109,112]	[0,0] --> [-313,-313]	[0,0] --> [-53,-53]	[0,0] --> [-28,-27]
+ [0,1000] --> [-30741,-22365]	[0,1000] --> [-18081,-9330]	[0,1000] --> [109,9359]	[0,1000] --> [-314,3684]	[0,1000] --> [-53,3943]	[0,1000] --> [-27,3968]
+ [0,2000] --> [-30743,-13992]	[0,2000] --> [-18082,-578]	[0,2000] --> [109,18607]	[0,1000] --> [-312,3683]	[0,1000] --> [-50,3944]	[0,1000] --> [-24,3968]
+ [0,3000] --> [-30743,-5615]	[0,3000] --> [-18082,8169]	[0,2000] --> [108,18605]	[0,1000] --> [-311,3684]	[0,1000] --> [-49,3942]	[0,1000] --> [-23,3968]
+ [0,4000] --> [-30744,2758]	[0,3000] --> [-18081,8168]	[0,2000] --> [106,18605]	[0,1000] --> [-312,3684]	[0,1000] --> [-51,3943]	[0,1000] --> [-23,3968]
+
+closing in:
+..	XAccel			YAccel				ZAccel			XGyro			YGyro			ZGyro
+ [2000,4000] --> [-13990,2758]	[1500,3000] --> [-4955,8168]	[1000,2000] --> [9355,18605]	[0,500] --> [-312,1687]	[0,500] --> [-51,1947]	[0,500] --> [-23,1974]
+ [3000,4000] --> [-5619,2758]	[1500,2250] --> [-4955,1608]	[1500,2000] --> [13980,18605]	[0,250] --> [-312,686]	[0,250] --> [-51,947]	[0,250] --> [-23,972]
+ [3500,4000] --> [-1432,2758]	[1875,2250] --> [-1683,1608]	[1750,2000] --> [16288,18605]	[0,125] --> [-312,186]	[0,125] --> [-51,446]	[0,125] --> [-23,472]
+ [3500,3750] --> [-1432,665]	[2062,2250] --> [-36,1608]	[1750,1875] --> [16288,17435]	[62,125] --> [-65,186]	[0,62] --> [-51,194]	[0,62] --> [-23,219]
+ [3625,3750] --> [-387,665]	[2062,2156] --> [-36,788]	[1750,1812] --> [16288,16866]	[62,93] --> [-65,57]	[0,31] --> [-51,70]	[0,31] --> [-23,95]
+..	XAccel			YAccel				ZAccel			XGyro			YGyro			ZGyro
+ [3625,3687] --> [-387,130]	[2062,2109] --> [-36,365]	[1750,1781] --> [16288,16570]	[77,93] --> [-6,57]	[0,15] --> [-51,5]	[0,15] --> [-23,32]
+ [3656,3687] --> [-120,130]	[2062,2085] --> [-36,154]	[1750,1765] --> [16288,16417]	[77,85] --> [-6,26]	[7,15] --> [-25,5]	[7,15] --> [0,32]
+ [3671,3687] --> [-3,130]	[2062,2073] --> [-36,50]	[1757,1765] --> [16346,16417]	[77,81] --> [-6,10]	[11,15] --> [-9,5]	[7,11] --> [0,16]
+ [3671,3679] --> [-3,62]	[2067,2073] --> [-4,50]	[1757,1761] --> [16346,16385]	[77,79] --> [-6,2]	[13,15] --> [0,5]	[7,9] --> [0,8]
+ [3671,3675] --> [-3,32]	[2067,2070] --> [-4,34]	[1759,1761] --> [16359,16385]	[78,79] --> [-2,2]	[13,14] --> [0,2]	[7,8] --> [0,4]
+averaging 10000 readings each time
+....................	XAccel			YAccel				ZAccel			XGyro			YGyro			ZGyro
+ [3671,3673] --> [-3,12]	[2067,2068] --> [-4,14]	[1760,1761] --> [16380,16385]	[78,79] --> [-1,2]	[13,14] --> [-2,2]	[7,8] --> [0,4]
+ [3671,3672] --> [-3,13]	[2067,2068] --> [-2,14]	[1760,1761] --> [16379,16385]	[78,79] --> [-1,2]	[13,14] --> [-2,2]	[7,8] --> [0,4]
+ [3671,3672] --> [-4,13]	[2067,2068] --> [-2,14]	[1760,1761] --> [16378,16385]	[78,79] --> [-2,2]	[13,14] --> [-2,2]	[7,8] --> [0,4]
+-------------- done --------------
+```
+
+
 ### Demo
 
 Watch the demo video below:

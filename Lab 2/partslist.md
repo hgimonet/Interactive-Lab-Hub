@@ -11,7 +11,7 @@
 | [Pi color tft](https://www.adafruit.com/product/4393) | yes | | |
 | [Stemma QT Cables](https://www.sparkfun.com/products/15081) | yes | | |
 | [Stemma QT Proximity, Light, RGB, and Gesture Sensor](https://www.adafruit.com/product/3595) | yes | APDS9960 | |
-| [Stemma QT Accel and Gyro Sensor](https://www.adafruit.com/product/3886) | yes | MPU-6050 | [Python](https://circuitpython.readthedocs.io/projects/mpu6050/en/latest/) |
+| [Stemma QT Accel and Gyro Sensor](https://www.adafruit.com/product/3886) | yes | MPU-6050 | [Python](https://circuitpython.readthedocs.io/projects/mpu6050/en/latest/) | [Calibration](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-sensorlab-gyroscope-calibration.pdf) |
 | [Gator Capacitive Touch Sensor Breakout](https://www.adafruit.com/product/4830) | yes | MPR121 | |
 | [Web camera](https://www.adafruit.com/product/3099) | yes | | |
 | [Encoder](https://www.sparkfun.com/products/15083) | yes | | [Python](https://github.com/sparkfun/Qwiic_Twist_Py)| |
