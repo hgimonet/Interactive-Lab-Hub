@@ -16,7 +16,7 @@ count = 0
 accel_recordings = []
 gyro_recordings = []
 
-while num_measurements :
+while count < num_measurements:
     accel_recordings.append(np.array(mpu.acceleration))
     gyro_recordings.append(np.array(mpu.gyro))
     time.sleep(dt)
