@@ -85,7 +85,7 @@ bg_color = 'black'
 accel_old = np.zeros(3)
 
 # set the refresh time
-dt = 0.1
+dt = 1
 vel = np.zeros(3)
 
 accel_offsets = [ 0.82114222, -0.13894366,  7.9939099 ]
@@ -101,10 +101,10 @@ def relativity(dt,v,c=2.99792458e3):
 
 while True:
 
-    accel = np.array(mpu.acceleration) - accel_offsets
-    gyro = np.array(mpu.gyro) - gyro_offsets
+    accel = np.array(mpu.acceleration) #- accel_offsets
+    gyro = np.array(mpu.gyro) #- gyro_offsets
     # calculate velocity
-    vel = (accel_old - accel)/dt
+    vel = (accel_old - accel)/(dt)
     speed = np.linalg.norm(vel)
 
     date_now = time.strftime("%m/%d/%Y")
