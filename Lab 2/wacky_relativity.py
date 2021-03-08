@@ -82,12 +82,7 @@ buttonB.switch_to_input()
 
 bg_color = 'black'
 
-first_line = "A: start/stop,"
-second_line = "B: lap, A+B: reset"
-
-timer_secs = 0
-timer_on = False
-lap = ""
+accel_old = np.zeros(3)
 
 # set the refresh time
 dt = 0.001
@@ -107,7 +102,7 @@ while True:
     accel = np.array(mpu.acceleration) - accel_offsets
     gyro = np.array(mpu.gyro) - gyro_offsets
     # calculate velocity
-    v += np.array(accel)*dt
+    v += (accel_old - accel)*dt
     speed = np.linalg.norm(v)
 
     date_now = time.strftime("%m/%d/%Y")
@@ -134,3 +129,5 @@ while True:
     # Display image.
     disp.image(image, rotation)
     time.sleep(dt)
+
+    accel_old = accel
