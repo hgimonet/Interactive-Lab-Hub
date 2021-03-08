@@ -25,8 +25,8 @@ while count < num_measurements:
 
 # accel_recordings = np.array(accel_recordings)
 # accel_recordings = np.array(accel_recordings)
-print(np.array(accel_recordings).mean(axis=1))
-print(np.array(gyro_recordings).mean(axis=1))
+print(np.array(accel_recordings).mean(axis=0))
+print(np.array(gyro_recordings).mean(axis=0))
 
 # while True:
 #     print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(mpu.acceleration))
