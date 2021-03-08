@@ -290,6 +290,12 @@ averaging 10000 readings each time
 -------------- done --------------
 ```
 
+As it turns out, these outputs aren't compatible with the python API, so I tried writing my own calibration by simply averaging measurements over 5 seconds (see code [here](mpu_calibrate.py)). 
+
+#### Using the MPU
+
+So in theory, v = a * dt, so I though if I had a velocity counter in the while loop, I could have an approximation for speed.
+
 
 ### Demo
 
