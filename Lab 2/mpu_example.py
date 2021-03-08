@@ -7,8 +7,9 @@ import numpy as np
 i2c = busio.I2C(board.SCL, board.SDA)
 mpu = adafruit_mpu6050.MPU6050(i2c)
 
-accel_offsets = [ 0.78548489, -0.04208049,  7.99242454]
-gyro_offsets = [-2.38952672, -0.4019084,  -0.25210687]
+
+accel_offsets = [ 0.82114222, -0.13894366,  7.9939099 ]
+gyro_offsets = [-2.36665191, -0.4468687,  -0.18727176]
 
 v = np.zeros(3)
 dt = 0.010

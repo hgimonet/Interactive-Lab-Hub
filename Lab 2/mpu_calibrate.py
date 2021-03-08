@@ -17,7 +17,7 @@ count = 0
 accel_recordings = []
 gyro_recordings = []
 
-print('Will measure for %.1f seconds, do not move sensor.'%(secs))
+print('Will take %d measurements over %.1f seconds, do not move sensor.'%(num_measurements, secs))
 while count < num_measurements:
     print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(mpu.acceleration))
     accel_recordings.append(np.array(mpu.acceleration))
