@@ -10,7 +10,7 @@ mpu = adafruit_mpu6050.MPU6050(i2c)
 # mpu.reset()
 
 dt=0.01
-num_measurements = 10000
+num_measurements = int(5.0/dt)
 count = 0
 
 accel_recordings = []
