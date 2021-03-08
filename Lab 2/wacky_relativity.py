@@ -96,7 +96,8 @@ v = np.zeros(3)
 accel_offsets = [ 0.82114222, -0.13894366,  7.9939099 ]
 gyro_offsets = [-2.36665191, -0.4468687,  -0.18727176]
 
-mpu.accelerometer_range = adafruit_mpu6050.Range.RANGE_2_G
+# mpu.accelerometer_range = adafruit_mpu6050.Range.RANGE_2_G
+
 
 def relativity(dt,v,c=2.99792458e3):
     return dt / sqrt(1-v**2/c**2)
