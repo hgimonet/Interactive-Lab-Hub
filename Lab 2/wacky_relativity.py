@@ -93,12 +93,17 @@ lap = ""
 dt = 0.01
 v = np.zeros(3)
 
+accel_offsets = [ 0.82114222, -0.13894366,  7.9939099 ]
+gyro_offsets = [-2.36665191, -0.4468687,  -0.18727176]
+
 def relativity(dt,v,c=2.99792458e3):
     return dt / sqrt(1-v**2/c**2)
 
 while True:
+    accel = np.array(mpu.acceleration) - accel_offsets
+    gyro = np.array(mpu.gyro) - gyro_offsets
     # calculate velocity
-    v += np.array(mpu.acceleration)*dt
+    v += np.array(accel)*dt
     speed = np.linalg.norm(v)
 
     date_now = time.strftime("%m/%d/%Y")
@@ -106,10 +111,10 @@ while True:
     timer_now = time.strftime("%H:%M:%S",time.gmtime(timer_secs))
 
 
-    acceleration = "a: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(mpu.acceleration)
+    acceleration = "a: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(tuple(accel))
     velocity = "v: X:%.2f, Y: %.2f, Z: %.2f m/s^2" %(tuple(v))
-    gyro = "Gyro X:%.2f, Y: %.2f, Z: %.2f degrees/s"%(mpu.gyro)
-    temp = "Temperature: %.2f C"%mpu.temperature
+    gyro = "Gyro X:%.2f, Y: %.2f, Z: %.2f degrees/s"%(tuple(gyro))
+    # temp = "Temperature: %.2f C"%mpu.temperature
 
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
