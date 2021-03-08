@@ -86,7 +86,7 @@ accel_old = np.zeros(3)
 
 # set the refresh time
 dt = 0.001
-v = np.zeros(3)
+vel = np.zeros(3)
 
 accel_offsets = [ 0.82114222, -0.13894366,  7.9939099 ]
 gyro_offsets = [-2.36665191, -0.4468687,  -0.18727176]
@@ -102,14 +102,14 @@ while True:
     accel = np.array(mpu.acceleration) - accel_offsets
     gyro = np.array(mpu.gyro) - gyro_offsets
     # calculate velocity
-    v += (accel_old - accel)*dt
+    vel += (accel_old - accel)/dt
     speed = np.linalg.norm(v)
 
     date_now = time.strftime("%m/%d/%Y")
     time_now = time.strftime("%H:%M:%S")
 
     acceleration = "a: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(tuple(accel))
-    velocity = "v: X:%.2f, Y: %.2f, Z: %.2f m/s^2" %(tuple(v))
+    velocity = "v: X:%.2f, Y: %.2f, Z: %.2f m/s^2" %(tuple(vel))
     gyro = "Gyro X:%.2f, Y: %.2f, Z: %.2f degrees/s"%(tuple(gyro))
     # temp = "Temperature: %.2f C"%mpu.temperature
 
