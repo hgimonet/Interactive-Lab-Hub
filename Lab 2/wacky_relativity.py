@@ -102,8 +102,6 @@ def relativity(dt,v,c=2.99792458e3):
     return dt / sqrt(1-v**2/c**2)
 
 while True:
-    mpu.sleep = False
-    mpu.cycle = False
 
     accel = np.array(mpu.acceleration) - accel_offsets
     gyro = np.array(mpu.gyro) - gyro_offsets
@@ -123,16 +121,6 @@ while True:
 
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
-    if buttonB.value and not buttonA.value:  # just button A pressed
-        timer_on = not timer_on
-    if buttonA.value and not buttonB.value:  # just button B pressed
-        lap = timer_now  # save the current timer time
-    if not buttonA.value and not buttonB.value:  # both pressed
-        timer_secs = 0  # reset timer
-        lap = ""  # reset lap
-
-    if timer_on:
-        timer_secs += 1
 
     # Write  lines of text.
     lines = [acceleration, velocity]
