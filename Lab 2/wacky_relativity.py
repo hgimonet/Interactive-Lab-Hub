@@ -107,8 +107,6 @@ while True:
 
     date_now = time.strftime("%m/%d/%Y")
     time_now = time.strftime("%H:%M:%S")
-    timer_now = time.strftime("%H:%M:%S",time.gmtime(timer_secs))
-
 
     acceleration = "a: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(tuple(accel))
     velocity = "v: X:%.2f, Y: %.2f, Z: %.2f m/s^2" %(tuple(v))
