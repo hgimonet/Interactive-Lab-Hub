@@ -104,7 +104,7 @@ while True:
     accel = np.array(mpu.acceleration) - accel_offsets
     gyro = np.array(mpu.gyro) - gyro_offsets
     # calculate velocity
-    vel += (accel_old - accel)/dt
+    vel = (accel_old - accel)/dt
     speed = np.linalg.norm(vel)
 
     date_now = time.strftime("%m/%d/%Y")
