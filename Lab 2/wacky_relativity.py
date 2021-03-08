@@ -99,6 +99,7 @@ mpu.cycle = True
 
 relative_time = 0
 relative_on = False
+start_time = datetime.time.now()
 
 def relativity(dt,v,c=2.99792458e3):
     return dt / sqrt(1-v**2/c**2)
