@@ -103,13 +103,13 @@ while True:
     gyro = np.array(mpu.gyro) - gyro_offsets
     # calculate velocity
     vel += (accel_old - accel)/dt
-    speed = np.linalg.norm(v)
+    speed = np.linalg.norm(vel)
 
     date_now = time.strftime("%m/%d/%Y")
     time_now = time.strftime("%H:%M:%S")
 
     acceleration = "a: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(tuple(accel))
-    velocity = "v: X:%.2f, Y: %.2f, Z: %.2f m/s^2" %(tuple(vel))
+    velocity = "v: X:%.2f, Y: %.2f, Z: %.2f m/s" %(tuple(vel))
     gyro = "Gyro X:%.2f, Y: %.2f, Z: %.2f degrees/s"%(tuple(gyro))
     # temp = "Temperature: %.2f C"%mpu.temperature
 
