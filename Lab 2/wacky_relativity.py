@@ -118,7 +118,7 @@ while True:
     # calculate velocity assuming accel gives displacement
     # vel = (accel_old - accel)/(dt)
     vel += accel*dt
-    speed = np.linalg.norm(vel)
+    speed = np.linalg.norm(vel[:2])
 
     date_now = time.strftime("%m/%d/%Y")
     time_now = time.strftime("%H:%M:%S")
