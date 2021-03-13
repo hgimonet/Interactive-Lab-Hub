@@ -312,6 +312,4 @@ For simplicity, I am therefore going to assume the sensor will only be moving in
 
 Watch the demo video below:
 
-**TODO**
-[![Wacky Relativity Demo Video](https://youtu.be/kVTu4pdrtA4/0.jpg)](https://youtu.be/kVTu4pdrtA4 "Wacky Relativity Demo")
-
+[![Wacky Relativity Demo Video](http://img.youtube.com/vi/kVTu4pdrtA4/0.jpg)](http://www.youtube.com/watch?v=kVTu4pdrtA4 "")
