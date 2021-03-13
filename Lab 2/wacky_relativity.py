@@ -98,7 +98,7 @@ mpu.sleep = False
 mpu.cycle = True
 mpu.cycle_rate = adafruit_mpu6050.Rate.CYCLE_40_HZ
 
-accel_filter = 0.5
+accel_filter = 0.1
 
 relative_time = 0
 relative_on = False
@@ -112,6 +112,7 @@ while True:
     if buttonB.value and not buttonA.value:  # just button A pressed
         relative_time = 0
         start_time = datetime.datetime.now()
+        relative_on = True
     # if buttonA.value and not buttonB.value:  # just button B pressed
     # if not buttonA.value and not buttonB.value:  # both pressed
 
