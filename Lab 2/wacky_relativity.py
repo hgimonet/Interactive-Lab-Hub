@@ -90,7 +90,7 @@ vel = np.zeros(3)
 dt = 1/40
 
 # initilize offsets
-accel_offsets = [ 0.8, -0.9,  7.9939099 ]
+accel_offsets = [ 0.8, 0.9,  7.9939099 ]
 gyro_offsets = [-2.36665191, -0.4468687,  -0.18727176]
 
 mpu.reset()
