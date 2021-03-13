@@ -103,7 +103,7 @@ relative_time = 0
 relative_on = False
 start_time = datetime.datetime.now()
 
-def relativity(v,c=2.99792458e4):
+def relativity(v,c=2.99792458e1):
     return 1 / sqrt(1-v**2/c**2)
 
 while True:
@@ -126,7 +126,7 @@ while True:
 
     date_now = time.strftime("%m/%d/%Y")
     time_now = time.strftime("%H:%M:%S")
-    time_relative = (start_time + datetime.timedelta(seconds = dt)).strftime("%H:%M:%S")
+    time_relative = (start_time + datetime.timedelta(seconds = relative_time)).strftime("%H:%M:%S")
 
     acceleration = "a: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(tuple(accel))
     velocity = "v: X:%.2f, Y: %.2f, Z: %.2f m/s" %(tuple(vel))
