@@ -87,7 +87,7 @@ accel_old = np.zeros(3)
 vel = np.zeros(3)
 
 # set the refresh time
-dt = 1
+dt = 0.0001
 
 # initilize offsets
 accel_offsets = [ 0.82114222, -0.13894366,  7.9939099 ]
@@ -116,8 +116,8 @@ while True:
     gyro = np.array(mpu.gyro) #- gyro_offsets
 
     # calculate velocity assuming accel gives displacement
-    vel = (accel_old - accel)/(dt)
-    # vel += accel*dt
+    # vel = (accel_old - accel)/(dt)
+    vel += accel*dt
     speed = np.linalg.norm(vel)
 
     date_now = time.strftime("%m/%d/%Y")
