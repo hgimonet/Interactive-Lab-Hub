@@ -132,7 +132,7 @@ while True:
     velocity = "v: X:%.2f, Y: %.2f, Z: %.2f m/s" %(tuple(vel))
     gyro = "Gyro X:%.2f, Y: %.2f, Z: %.2f degrees/s"%(tuple(gyro))
     speed_print = "Speed: %.2f m/s"%(speed)
-    rel = "Relativity %.2f%.2f"%(relativity(speed))
+    rel = "Relativity %.2f"%(relativity(speed))
     # temp = "Temperature: %.2f C"%mpu.temperature
 
     # Draw a black filled box to clear the image.
