@@ -90,7 +90,7 @@ vel = np.zeros(3)
 dt = 1/40
 
 # initilize offsets
-accel_offsets = [ 0.82114222, -0.13894366,  7.9939099 ]
+accel_offsets = [ 0.8, -0.9,  7.9939099 ]
 gyro_offsets = [-2.36665191, -0.4468687,  -0.18727176]
 
 mpu.reset()
@@ -104,7 +104,7 @@ relative_time = 0
 relative_on = False
 start_time = datetime.datetime.now()
 
-def relativity(dt,v,c=2.99792458e3):
+def relativity(dt,v,c=2.99792458e4):
     return dt / sqrt(1-v**2/c**2)
 
 while True:
