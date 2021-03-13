@@ -86,26 +86,25 @@ bg_color = 'black'
 accel_old = np.zeros(3)
 vel = np.zeros(3)
 
-# set the refresh time
-dt = 1/40
-
 # initilize offsets
 accel_offsets = [ 0.8, 0.9,  7.9939099 ]
 gyro_offsets = [-2.36665191, -0.4468687,  -0.18727176]
 
+# set the refresh time
+dt = 1/40
 mpu.reset()
 mpu.sleep = False
 mpu.cycle = True
 mpu.cycle_rate = adafruit_mpu6050.Rate.CYCLE_40_HZ
 
-accel_filter = 0
+accel_filter = 0.1
 
 relative_time = 0
 relative_on = False
 start_time = datetime.datetime.now()
 
-def relativity(dt,v,c=2.99792458e4):
-    return dt / sqrt(1-v**2/c**2)
+def relativity(v,c=2.99792458e8):
+    return 1 / sqrt(1-v**2/c**2)
 
 while True:
 
@@ -116,7 +115,7 @@ while True:
     # if buttonA.value and not buttonB.value:  # just button B pressed
     # if not buttonA.value and not buttonB.value:  # both pressed
 
-    accel = np.array(mpu.acceleration) #- accel_offsets
+    accel = np.array(mpu.acceleration)
     accel -= accel_offsets
     gyro = np.array(mpu.gyro) #- gyro_offsets
 
@@ -133,13 +132,14 @@ while True:
     velocity = "v: X:%.2f, Y: %.2f, Z: %.2f m/s" %(tuple(vel))
     gyro = "Gyro X:%.2f, Y: %.2f, Z: %.2f degrees/s"%(tuple(gyro))
     speed_print = "Speed: %.2f m/s"%(speed)
+    rel = "Relativity %.2f%.2f"%(relativity(speed))
     # temp = "Temperature: %.2f C"%mpu.temperature
 
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     # Write  lines of text.
-    lines = [acceleration, velocity, speed_print, time_now, time_relative]
+    lines = [acceleration, velocity, speed_print, time_now, time_relative, rel]
     y = top
     for text in lines:
         x = int(width / 2 - font.getsize(text)[0] / 2)
@@ -149,5 +149,5 @@ while True:
     # Display image.
     disp.image(image, rotation)
     time.sleep(dt)
-    relative_time += relativity(dt,speed)
+    relative_time += dt * relativity(speed)
     accel_old = accel
