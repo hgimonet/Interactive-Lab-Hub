@@ -116,6 +116,7 @@ while True:
     # if not buttonA.value and not buttonB.value:  # both pressed
 
     accel = np.array(mpu.acceleration) #- accel_offsets
+    accel -= accel_offsets
     gyro = np.array(mpu.gyro) #- gyro_offsets
 
     # calculate velocity assuming accel gives displacement
