@@ -98,7 +98,7 @@ mpu.sleep = False
 mpu.cycle = True
 mpu.cycle_rate = adafruit_mpu6050.Rate.CYCLE_40_HZ
 
-accel_filter = 1
+accel_filter = 0.5
 
 relative_time = 0
 relative_on = False
