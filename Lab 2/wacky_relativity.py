@@ -87,7 +87,7 @@ accel_old = np.zeros(3)
 vel = np.zeros(3)
 
 # set the refresh time
-dt = 0.000001
+dt = 1/40
 
 # initilize offsets
 accel_offsets = [ 0.82114222, -0.13894366,  7.9939099 ]
@@ -96,6 +96,7 @@ gyro_offsets = [-2.36665191, -0.4468687,  -0.18727176]
 mpu.reset()
 mpu.sleep = False
 mpu.cycle = True
+mpu.cycle_rate = adafruit_mpu6050.Rate.CYCLE_40_HZ
 
 relative_time = 0
 relative_on = False
