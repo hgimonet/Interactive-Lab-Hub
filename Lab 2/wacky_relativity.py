@@ -103,7 +103,7 @@ relative_time = 0
 relative_on = False
 start_time = datetime.datetime.now()
 
-def relativity(v,c=2.99792458e8):
+def relativity(v,c=2.99792458e4):
     return 1 / sqrt(1-v**2/c**2)
 
 while True:
