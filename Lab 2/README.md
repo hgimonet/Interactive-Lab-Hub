@@ -1,3 +1,6 @@
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+
 **Edit 1 (3/8/20):** I got into an accident yesterday and I wasn't able to get my clock working with the accelerometer yet (thus no demo).
 **Edit 2 (3/13/20):** Unfortunately lab 3 didn't help too much on my accelerometer issues, but I managed to make a semi-working solution (without solving the IMU drift issue).
 
