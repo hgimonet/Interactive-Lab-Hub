@@ -218,7 +218,11 @@ Although the hour glass simulation looked really hard to do, I really wanted to 
 #### Wacky Relativity
 
 According to special relativity, when two bodies are moving at different speeds, each body percieves that the other one's time is going slower by a very very small increment. 
-<img src="https://latex.codecogs.com/gif.latex?P(s | O_t )=\\[\gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\\] t " />
+This increment is the Lorenz factor, which is given  by the following:
+
+<img src="https://latex.codecogs.com/gif.latex?P(s | O_t )= \gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}} t " />
+
+My relative clock gives the relative time, assuming that c=2.9979248e3, which is obviosuly much much smaller than the actual speed of light!
 
 
 
