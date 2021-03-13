@@ -87,7 +87,7 @@ accel_old = np.zeros(3)
 vel = np.zeros(3)
 
 # set the refresh time
-dt = 0.0001
+dt = 0.000001
 
 # initilize offsets
 accel_offsets = [ 0.82114222, -0.13894366,  7.9939099 ]
