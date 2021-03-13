@@ -1,6 +1,3 @@
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
-
 **Edit 1 (3/8/20):** I got into an accident yesterday and I wasn't able to get my clock working with the accelerometer yet (thus no demo).
 **Edit 2 (3/13/20):** Unfortunately lab 3 didn't help too much on my accelerometer issues, but I managed to make a semi-working solution (without solving the IMU drift issue).
 
@@ -221,8 +218,9 @@ Although the hour glass simulation looked really hard to do, I really wanted to 
 #### Wacky Relativity
 
 According to special relativity, when two bodies are moving at different speeds, each body percieves that the other one's time is going slower by a very very small increment. 
+<img src="https://latex.codecogs.com/gif.latex?P(s | O_t )=\\[\gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\\] t " />
 
-\\[\gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\\]
+
 
 #### MPU6050 Calibration
 First, I had to calibrate the MPU6050. After trying (and failing) to do so with the pi, I decided to use an Arduino UNO since the tutorials were more straightforward. I hooked the MPU6050 to a UNO plugged into my laptop using the Arduino configuration in (this manual)[https://cdn-learn.adafruit.com/downloads/pdf/mpu6050-6-dof-accelerometer-and-gyro.pdf]. 
