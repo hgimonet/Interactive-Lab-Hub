@@ -98,6 +98,8 @@ mpu.sleep = False
 mpu.cycle = True
 mpu.cycle_rate = adafruit_mpu6050.Rate.CYCLE_40_HZ
 
+accel_filter = 1
+
 relative_time = 0
 relative_on = False
 start_time = datetime.datetime.now()
@@ -118,7 +120,7 @@ while True:
 
     # calculate velocity assuming accel gives displacement
     # vel = (accel_old - accel)/(dt)
-    vel += accel*(accel>0.1)*dt
+    vel += accel*(accel> accel_filter)*dt
     speed = np.linalg.norm(vel[:2])
 
     date_now = time.strftime("%m/%d/%Y")
