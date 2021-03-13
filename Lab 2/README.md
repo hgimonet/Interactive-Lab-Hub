@@ -220,7 +220,7 @@ Although the hour glass simulation looked really hard to do, I really wanted to 
 According to special relativity, when two bodies are moving at different speeds, each body percieves that the other one's time is going slower by a very very small increment. 
 This increment is the Lorenz factor, which is given  by the following:
 
-<img src="https://latex.codecogs.com/gif.latex?P(s | O_t )= \gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}} t " />
+<img src="https://latex.codecogs.com/gif.latex?%5Cgamma%20%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B1-%5Cfrac%7Bv%5E2%7D%7Bc%5E2%7D%7D%7D" />
 
 My relative clock gives the relative time, assuming that c=2.9979248e3, which is obviosuly much much smaller than the actual speed of light!
 
