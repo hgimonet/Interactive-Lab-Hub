@@ -215,6 +215,12 @@ Although the hour glass simulation looked really hard to do, I really wanted to 
 
 ### Process
 
+#### Wacky Relativity
+
+According to special relativity, when two bodies are moving at different speeds, each body percieves that the other one's time is going slower by a very very small increment. 
+
+\\[\gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\\]
+
 #### MPU6050 Calibration
 First, I had to calibrate the MPU6050. After trying (and failing) to do so with the pi, I decided to use an Arduino UNO since the tutorials were more straightforward. I hooked the MPU6050 to a UNO plugged into my laptop using the Arduino configuration in (this manual)[https://cdn-learn.adafruit.com/downloads/pdf/mpu6050-6-dof-accelerometer-and-gyro.pdf]. 
 
