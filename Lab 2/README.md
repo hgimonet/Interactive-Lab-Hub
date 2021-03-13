@@ -1,4 +1,5 @@
-Note: I got into an accident yesterday and I wasn't able to get my clock working with the accelerometer yet (thus no demo).
+**Edit 1 (3/8/20):** I got into an accident yesterday and I wasn't able to get my clock working with the accelerometer yet (thus no demo).
+**Edit 2 (3/13/20):** Unfortunately lab 3 didn't help too much on my accelerometer issues, but I managed to make a semi-working solution (without solving the IMU drift issue).
 
 # The Clock of Pi
 
@@ -305,10 +306,12 @@ You need to first remove gravity from the accelerometer data using the gyroscope
 
 Of course, getting this all working requires basically building an [IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit)... 
 
-For simplicity, I am therefore going to assume the sensor will only be moving in the x-y plane, with no rotations (no gravity, yay!).
+For simplicity, I am therefore going to assume the sensor will only be moving in the x-y plane, with no rotations (no gravity, yay!). I did not fix the drift issue (where the velocity increases over time because the refresh rate is not high enough to capture every change in speed), so the speed is essentially only cumulative.
 
 ### Demo
 
 Watch the demo video below:
 
 **TODO**
+[![Wacky Relativity Demo Video](https://youtu.be/kVTu4pdrtA4/0.jpg)](https://youtu.be/kVTu4pdrtA4 "Wacky Relativity Demo")
+

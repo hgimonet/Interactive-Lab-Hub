@@ -97,10 +97,10 @@ mpu.sleep = False
 mpu.cycle = True
 mpu.cycle_rate = adafruit_mpu6050.Rate.CYCLE_40_HZ
 
+# block accelations that are smaller than a threshold
 accel_filter = 0.1
 
 relative_time = 0
-relative_on = False
 start_time = datetime.datetime.now()
 
 def relativity(v,c=2.99792458e3):
@@ -109,23 +109,24 @@ def relativity(v,c=2.99792458e3):
 while True:
 
     if buttonB.value and not buttonA.value:  # just button A pressed
+        # reset the second clock
         relative_time = 0
         start_time = datetime.datetime.now()
-        relative_on = True
     # if buttonA.value and not buttonB.value:  # just button B pressed
     # if not buttonA.value and not buttonB.value:  # both pressed
 
     accel = np.array(mpu.acceleration)
+    # remove offset for a more accurate measure
     accel -= accel_offsets
     gyro = np.array(mpu.gyro) #- gyro_offsets
 
-    # calculate velocity assuming accel gives displacement
-    # vel = (accel_old - accel)/(dt)
+    # Calculate velocity and speed
     vel += accel*(np.absolute(accel)> accel_filter)*dt
     speed = np.linalg.norm(vel[:2])
 
     date_now = time.strftime("%m/%d/%Y")
     time_now = time.strftime("%H:%M:%S")
+    # Add calcuclated change to clock 2 start time
     time_relative = (start_time + datetime.timedelta(seconds = relative_time)).strftime("%H:%M:%S")
 
     acceleration = "a: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(tuple(accel))
@@ -148,6 +149,7 @@ while True:
 
     # Display image.
     disp.image(image, rotation)
+
+    # Let time pass....
     time.sleep(dt)
     relative_time += dt * relativity(speed)
-    accel_old = accel
