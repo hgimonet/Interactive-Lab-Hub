@@ -1,5 +1,6 @@
-**Edit 1 (3/8/20):** I got into an accident yesterday and I wasn't able to get my clock working with the accelerometer yet (thus no demo).
-**Edit 2 (3/13/20):** Unfortunately lab 3 didn't help too much on my accelerometer issues, but I managed to make a semi-working solution (without solving the IMU drift issue).
+**Edit 1 (3/8/20):** I got into an accident yesterday and I wasn't able to get my clock working with the accelerometer yet (thus no demo). 
+
+**Edit 2 (3/13/20):** Ilan, unfortunately lab 3 didn't help too much on my accelerometer issues, but I managed to make a semi-working solution (without solving the IMU drift issue).
 
 # The Clock of Pi
 
@@ -218,11 +219,16 @@ Although the hour glass simulation looked really hard to do, I really wanted to 
 #### Wacky Relativity
 
 According to special relativity, when two bodies are moving at different speeds, each body percieves that the other one's time is going slower by a very very small increment. 
+This increment is the Lorenz factor, which is given  by the following:
 
-\\[\gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\\]
+<img src="https://latex.codecogs.com/gif.latex?%5Cgamma%20%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B1-%5Cfrac%7Bv%5E2%7D%7Bc%5E2%7D%7D%7D" />
+
+My relative clock gives the relative time, assuming that c=2.9979248e3, which is obviosuly much much smaller than the actual speed of light!
+
+
 
 #### MPU6050 Calibration
-First, I had to calibrate the MPU6050. After trying (and failing) to do so with the pi, I decided to use an Arduino UNO since the tutorials were more straightforward. I hooked the MPU6050 to a UNO plugged into my laptop using the Arduino configuration in (this manual)[https://cdn-learn.adafruit.com/downloads/pdf/mpu6050-6-dof-accelerometer-and-gyro.pdf]. 
+First, I had to calibrate the MPU6050. After trying (and failing) to do so with the pi, I decided to use an Arduino UNO since the tutorials were more straightforward. I hooked the MPU6050 to a UNO plugged into my laptop using the Arduino configuration in [this manual](https://cdn-learn.adafruit.com/downloads/pdf/mpu6050-6-dof-accelerometer-and-gyro.pdf). 
 
 See the setup below:
 
