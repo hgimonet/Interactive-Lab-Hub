@@ -109,6 +109,7 @@ def diplay_img(image):
     # Display image.
     disp.image(image)
 
+frames2play = pup.FRAMES['walk_right']
 
 def play_sequence(action, loop=True):
     frames = pup.FRAMES[action]
@@ -125,36 +126,45 @@ play_sequence('walk_front')
 
 @socketio.on('walk_front')
 def handle_walk_front():
-    play_sequence('walk_front')
+    frames2play = pup.FRAMES['walk_front']
+    # play_sequence('walk_front')
 
 @socketio.on('walk_right')
 def handle_walk_right():
-    play_sequence('walk_right')
+    frames2play = pup.FRAMES['walk_right']
+    # play_sequence('walk_right')
 
 @socketio.on('walk_back')
 def handle_walk_back():
-    play_sequence('walk_back')
+    frames2play = pup.FRAMES['walk_back']
+    # play_sequence('walk_back')
 
 @socketio.on('walk_left')
 def handle_walk_left():
-    play_sequence('walk_left')
+    frames2play = pup.FRAMES['walk_left']
+    # play_sequence('walk_left')
 
 @socketio.on('sit_front')
 def handle_sit_front():
-    play_sequence('sit_front', loop=False)
+    frames2play = pup.FRAMES['sit_front']
+    # play_sequence('sit_front', loop=False)
 
 @socketio.on('sit_side')
 def handle_sit_side():
-    play_sequence('sit_side', loop=False)
-    play_sequence('sitting_side')
+    frames2play = pup.FRAMES['sit_side']
+    # play_sequence('sit_side', loop=False)
+    frames2play = pup.FRAMES['sitting_side']
+    # play_sequence('sitting_side')
 
 @socketio.on('down_side')
 def handle_down_side():
-    play_sequence('down_side')
+    frames2play = pup.FRAMES['down_side']
+    # play_sequence('down_side')
 
 @socketio.on('run_side')
 def handle_run_side():
-    play_sequence('run_side')
+    frames2play = pup.FRAMES['run_side']
+    # play_sequence('run_side')
 
 
 @socketio.on('bark')
@@ -174,6 +184,10 @@ def test_connect():
 def handle_message(val):
     # print(mpu.acceleration)
     emit('pong-gps', mpu.acceleration)
+
+@socketio.on('ping-tft')
+def handle_tft():
+    diplay_img(frames2play.pop())
 
 @app.route('/')
 def index():

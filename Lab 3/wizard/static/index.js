@@ -131,7 +131,6 @@ const walk_back = document.getElementById('walk_back');
 const walk_left = document.getElementById('walk_left');
 const sit_front = document.getElementById('sit_front');
 const sit_side = document.getElementById('sit_side');
-//const sitting_side = document.getElementById('sitting_side');
 const down_side = document.getElementById('down_side');
 const run_side = document.getElementById('run_side');
 
@@ -201,6 +200,7 @@ wordsIn.onkeyup = (e) => { if (e.keyCode === 13) { send.click(); } };
   
 setInterval(() => {
   socket.emit('ping-gps', 'dat')
+  socket.emit('ping-tft')
 }, 100)
 
 socket.on('disconnect', () => {
