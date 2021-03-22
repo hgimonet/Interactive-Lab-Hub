@@ -110,12 +110,14 @@ def diplay_img(image):
     disp.image(image)
 
 
-def play_sequence(action):
+def play_sequence(action, loop=True):
     frames = pup.FRAMES[action]
-    for frame in frames:
-        print(frame.width, frame.height)
-        diplay_img(frame)
-        time.sleep(0.1)
+    while True:
+        for frame in frames:
+            diplay_img(frame)
+            time.sleep(0.1)
+        if not loop:
+            break
 
 play_sequence('walk_front')
 
@@ -139,11 +141,11 @@ def handle_walk_left():
 
 @socketio.on('sit_front')
 def handle_sit_front():
-    play_sequence('sit_front')
+    play_sequence('sit_front', loop=False)
 
 @socketio.on('sit_side')
 def handle_sit_side():
-    play_sequence('sit_side')
+    play_sequence('sit_side', loop=False)
     play_sequence('sitting_side')
 
 @socketio.on('down_side')
@@ -170,7 +172,7 @@ def test_connect():
 
 @socketio.on('ping-gps')
 def handle_message(val):
-    print(mpu.acceleration)
+    # print(mpu.acceleration)
     emit('pong-gps', mpu.acceleration)
 
 @app.route('/')

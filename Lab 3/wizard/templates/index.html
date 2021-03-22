@@ -4,41 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
     <link rel="stylesheet" href="static/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js"></script>
     <title>Document</title>
 </head>
 <body>
-	<div id='chart'></div>
-    <br>
-	<button id = 'play'>Eavesdrop</button>
-	<button id = 'bark'>Bark</button>
-    <audio id='mic' src="http://{{ hostname }}.local:8080" >
-    </audio>
-        <br>
-            <br>
-    <label> Speak
-        <input type="text" id='wordsIn'>
-        <button id='send'>send</button>
+<div id='chart'></div>
+<br>
+<button id='play'>Eavesdrop</button>
+<audio id='mic' src="http://{{ hostname }}.local:8080">
+</audio>
+<br>
+<br>
+<label> Speak
+    <input type="text" id='wordsIn'>
+    <button id='send'>send</button>
+    <button id='bark'>Bark</button>
 
-    </label>
-    <div>
-        <button id = 'walk_front'>walk front</button>
-        <button id = 'walk_right'>walk right</button>
-        <button id = 'walk_back'>walk back</button>
-        <button id = 'walk_left'>walk left</button>
-        <br>
-        <button id = 'sit_front'>sit front</button>
-        <button id = 'sit_side'>sit side</button>
-        <br>
-        <button id = 'down_side'>down side</button>
-        <br>
-        <button id = 'run_side'>run side</button>
-    </div>
+</label>
+<div>
+    <button id='walk_front'>walk front</button>
+    <button id='walk_right'>walk right</button>
+    <button id='walk_back'>walk back</button>
+    <button id='walk_left'>walk left</button>
+    <br>
+    <button id='sit_front'>sit front</button>
+    <button id='sit_side'>sit side</button>
+    <br>
+    <button id='down_side'>down side</button>
+    <br>
+    <button id='run_side'>run side</button>
+</div>
 <script src="static/index.js"></script>
 </body>
 </html>
