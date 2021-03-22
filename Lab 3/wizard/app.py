@@ -116,7 +116,7 @@ def play_sequence(action):
         print(frame.width, frame.height)
         diplay_img(frame)
         # disp.image(frame.rotate(90))
-        time(0.1)
+        time.sleep(0.1)
 
 
 

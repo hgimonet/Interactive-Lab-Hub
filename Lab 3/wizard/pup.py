@@ -33,7 +33,7 @@ def gen_frames(imgs, bg_w=240, bg_h=135, img_w=96, img_h=96, bg_col='white'):
     for img in imgs:
         background = Image.new('RGB', (bg_w, bg_h), bg_col)
         background.paste(img, offset, mask=img.split()[-1])
-        frames.append(background)
+        frames.append(background.rotate(90, expand=True))
     return frames
 
 # find the correct images within the image
