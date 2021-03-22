@@ -112,8 +112,8 @@ def handle_message(val):
     # print(mpu.acceleration)
     emit('pong-gps', mpu.acceleration)
 
-@socketio.on('walk_front'):
-def handle_walk_front():
+# @socketio.on('walk_front'):
+# def handle_walk_front():
 
 
 
