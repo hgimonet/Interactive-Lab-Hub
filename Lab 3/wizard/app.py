@@ -185,8 +185,8 @@ def signal_handler(sig, frame):
     audio_stream.terminate()
     sys.exit(0)
 
+# play_sequence('walk_front')
 signal.signal(signal.SIGINT, signal_handler)
-play_sequence('walk_front')
 
 
 if __name__ == "__main__":
