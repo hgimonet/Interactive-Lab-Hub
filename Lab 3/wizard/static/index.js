@@ -133,6 +133,7 @@ const sit_front = document.getElementById('sit_front');
 const sit_side = document.getElementById('sit_side');
 const down_side = document.getElementById('down_side');
 const run_side = document.getElementById('run_side');
+const love = document.getElementById('love');
 
 const src = mic.src
 mic.src = ''
