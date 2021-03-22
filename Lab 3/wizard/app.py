@@ -119,7 +119,6 @@ def play_sequence(action, loop=True):
         if not loop:
             break
 
-play_sequence('walk_front')
 
 # WIZARD INTERACTIONS
 
@@ -186,6 +185,7 @@ def signal_handler(sig, frame):
     sys.exit(0)
 
 signal.signal(signal.SIGINT, signal_handler)
+play_sequence('walk_front')
 
 
 if __name__ == "__main__":
