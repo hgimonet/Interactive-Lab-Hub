@@ -112,7 +112,7 @@ def diplay_img(image):
 
 def play_sequence(action, loops=3):
     frames = pup.FRAMES[action]
-    for i in range(loops+1):
+    for i in range(loops):
         for frame in frames:
             diplay_img(frame)
             time.sleep(0.1)
@@ -153,6 +153,10 @@ def handle_down_side():
 @socketio.on('run_side')
 def handle_run_side():
     play_sequence('run_side')
+
+@socketio.on('love')
+def handle_run_side():
+    play_sequence('love')
 
 
 @socketio.on('bark')

@@ -165,9 +165,9 @@ sit_side.onclick = () => {
     socket.emit('sit_side')
 }
 
-//sitting_side.onclick = () => {
-//    socket.emit('sitting_side')
-//}
+love.onclick = () => {
+    socket.emit('love')
+}
 
 down_side.onclick = () => {
     socket.emit('down_side')

@@ -27,11 +27,18 @@ def gen_gif(action):
                    disposal=2)
 
 
-def gen_frames(imgs, bg_w=240, bg_h=135, img_w=96, img_h=96, bg_col='white'):
+def gen_frames(imgs, bg_w=240, bg_h=135, img_w=96, img_h=96, bg_col='white', love=False):
     offset = ((bg_w - img_w) // 2, (bg_h - img_h) // 2)
+    if love:
+        hearts = Image.open('imgs/hearts.png')
+        heart_offset = [(bg_w - hearts.width) // 2, (bg_h - hearts.height) // 2]
+        heart_mask = hearts.split()[-1]
+        bg_col = 'pink'
     frames = []
     for img in imgs:
         background = Image.new('RGB', (bg_w, bg_h), bg_col)
+        if love:
+            background.paste(hearts, heart_offset, mask=heart_mask)
         background.paste(img, offset, mask=img.split()[-1])
         frames.append(background.rotate(90, expand=True))
     return frames
@@ -53,6 +60,9 @@ FRAMES = {}
 for crop in CROPS:
     FRAMES[crop] = gen_frames(CROPS[crop])
     # gen_gif(crop)
+
+FRAMES['love'] = gen_frames(CROPS['sitting_side'], love=True)*3
+# gen_gif('love')
 
 # for action in CROPS:
 #     gen_gif(action)
