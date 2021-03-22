@@ -156,6 +156,7 @@ def handle_run_side():
 
 @socketio.on('love')
 def handle_love():
+    print('love')
     play_sequence('love')
 
 
