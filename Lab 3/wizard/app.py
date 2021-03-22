@@ -115,10 +115,7 @@ def play_sequence(action):
     for frame in frames:
         print(frame.width, frame.height)
         diplay_img(frame)
-        # disp.image(frame.rotate(90))
         time.sleep(0.1)
-
-
 
 play_sequence('walk_front')
 
@@ -142,9 +139,42 @@ def handle_message(val):
     # print(mpu.acceleration)
     emit('pong-gps', mpu.acceleration)
 
-# @socketio.on('walk_front'):
-# def handle_walk_front():
 
+@socketio.on('walk_front')
+def handle_walk_front():
+    play_sequence('walk_front')
+
+@socketio.on('walk_right')
+def handle_walk_right():
+    play_sequence('walk_right')
+
+@socketio.on('walk_back')
+def handle_walk_back():
+    play_sequence('walk_back')
+
+@socketio.on('walk_left')
+def handle_walk_left():
+    play_sequence('walk_left')
+
+@socketio.on('sit_front')
+def handle_sit_front():
+    play_sequence('sit_front')
+
+@socketio.on('sit_side')
+def handle_sit_side():
+    play_sequence('sit_side')
+
+@socketio.on('sitting_side')
+def handle_sitting_side():
+    play_sequence('sitting_side')
+
+@socketio.on('down_side')
+def handle_down_side():
+    play_sequence('down_side')
+
+@socketio.on('run_side')
+def handle_run_side():
+    play_sequence('run_side')
 
 
 @app.route('/')

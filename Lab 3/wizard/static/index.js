@@ -125,6 +125,15 @@ const play = document.getElementById('play');
 const wordsIn = document.getElementById('wordsIn');
 const send = document.getElementById('send');
 const bark = document.getElementById('bark')
+const walk_front = document.getElementById('walk_front');
+const walk_right = document.getElementById('walk_right');
+const walk_back = document.getElementById('walk_back');
+const walk_left = document.getElementById('walk_left');
+const sit_front = document.getElementById('sit_front');
+const sit_side = document.getElementById('sit_side');
+const sitting_side = document.getElementById('sitting_side');
+const down_side = document.getElementById('down_side');
+const run_side = document.getElementById('run_side');
 
 const src = mic.src
 mic.src = ''
