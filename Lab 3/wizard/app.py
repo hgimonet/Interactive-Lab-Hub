@@ -185,7 +185,7 @@ def handle_message(val):
 
 @socketio.on('ping-tft')
 def handle_tft():
-    if len(frames2play>1):
+    if len(frames2play)>1:
         diplay_img(frames2play.pop())
     else:
         diplay_img(frames2play[0])
