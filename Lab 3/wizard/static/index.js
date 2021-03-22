@@ -131,7 +131,6 @@ const walk_back = document.getElementById('walk_back');
 const walk_left = document.getElementById('walk_left');
 const sit_front = document.getElementById('sit_front');
 const sit_side = document.getElementById('sit_side');
-const sitting_side = document.getElementById('sitting_side');
 const down_side = document.getElementById('down_side');
 const run_side = document.getElementById('run_side');
 
@@ -164,10 +163,6 @@ sit_front.onclick = () => {
 
 sit_side.onclick = () => {
     socket.emit('sit_side')
-}
-
-sitting_side.onclick = () => {
-    socket.emit('sitting_side')
 }
 
 down_side.onclick = () => {
