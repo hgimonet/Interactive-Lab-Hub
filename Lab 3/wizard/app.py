@@ -87,6 +87,7 @@ disp.image(image)
 def play_sequence(action):
     frames = pup.FRAMES[action]
     for frame in frames:
+        print(frame.width, frame.height)
         disp.image(frame.rotate(90))
         time(0.1)
 
