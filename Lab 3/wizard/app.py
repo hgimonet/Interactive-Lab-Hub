@@ -111,6 +111,7 @@ def diplay_img(image):
 
 
 def play_sequence(action, loop=True):
+    print('starting %s'%(action))
     frames = pup.FRAMES[action]
     # while True:
     for frame in frames:

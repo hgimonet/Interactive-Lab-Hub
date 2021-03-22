@@ -122,8 +122,8 @@ socket.on('connect', () => {
 
 const mic = document.getElementById('mic');
 const play = document.getElementById('play');
-const wordsIn = document.getElementById('wordsIn');
-const send = document.getElementById('send');
+//const wordsIn = document.getElementById('wordsIn');
+//const send = document.getElementById('send');
 const bark = document.getElementById('bark')
 const walk_front = document.getElementById('walk_front');
 const walk_right = document.getElementById('walk_right');
@@ -188,11 +188,11 @@ play.onclick = () => {
   
 }
 
-send.onclick = () => {
-  socket.emit('speak', wordsIn.value)
-  wordsIn.value = ''
-}
-wordsIn.onkeyup = (e) => { if (e.keyCode === 13) { send.click(); } };
+//send.onclick = () => {
+//  socket.emit('speak', wordsIn.value)
+//  wordsIn.value = ''
+//}
+//wordsIn.onkeyup = (e) => { if (e.keyCode === 13) { send.click(); } };
   
 setInterval(() => {
   socket.emit('ping-gps', 'dat')
