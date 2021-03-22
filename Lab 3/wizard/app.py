@@ -111,16 +111,14 @@ def diplay_img(image):
 
 frames2play = pup.FRAMES['walk_right']
 
-def play_sequence(action, loop=True):
-    frames = pup.FRAMES[action]
-    while True:
-        for frame in frames:
-            diplay_img(frame)
-            time.sleep(0.1)
-        if not loop:
-            break
-
-play_sequence('walk_front')
+# def play_sequence(action, loop=True):
+#     frames = pup.FRAMES[action]
+#     while True:
+#         for frame in frames:
+#             diplay_img(frame)
+#             time.sleep(0.1)
+#         if not loop:
+#             break
 
 # WIZARD INTERACTIONS
 
