@@ -10,7 +10,7 @@
 | [Reader](https://www.bhphotovideo.com/c/product/751120-REG/Iogear_GFR204SD_10_in_1_USB_2_0_SD_MicroSD_MMC.html) | yes | | |
 | [Pi color tft](https://www.adafruit.com/product/4393) | yes | | |
 | [Stemma QT Cables](https://www.sparkfun.com/products/15081) | yes | | |
-| [Stemma QT Proximity, Light, RGB, and Gesture Sensor](https://www.adafruit.com/product/3595) | yes | APDS9960 | |
+| [Stemma QT Proximity, Light, RGB, and Gesture Sensor](https://www.adafruit.com/product/3595) | yes | APDS9960 | [Python](https://circuitpython.readthedocs.io/projects/apds9960/en/latest/) |
 | [Stemma QT Accel and Gyro Sensor](https://www.adafruit.com/product/3886) | yes | MPU-6050 | [Python](https://circuitpython.readthedocs.io/projects/mpu6050/en/latest/) | [Calibration](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-sensorlab-gyroscope-calibration.pdf) |
 | [Gator Capacitive Touch Sensor Breakout](https://www.adafruit.com/product/4830) | yes | MPR121 | [Python](https://circuitpython.readthedocs.io/projects/mpr121/en/latest/)|
 | [Web camera](https://www.adafruit.com/product/3099) | yes | | |
