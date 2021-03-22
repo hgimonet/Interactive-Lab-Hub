@@ -100,7 +100,7 @@ The system uses
 
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/setup.jpg" width="400">
 
-The virtual pup is made of sprites I borrowed from [a game mod forum](https://community.playstarbound.com/threads/fluffy-dogs-other-alternative-dog-sprites-update-8-pug-time.109948/). I generated looping frames in [wizard/pup.py](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/wizard/pup/py) for all the pup's possible reactions. 
+The virtual pup is made of sprites I borrowed from [a game mod forum](https://community.playstarbound.com/threads/fluffy-dogs-other-alternative-dog-sprites-update-8-pug-time.109948/). I generated looping frames for the TFT to display in [wizard/pup.py](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/wizard/pup/py) for all the pup's possible reactions. 
 
 Here are some of the pup's interaction frames: 
 
