@@ -110,16 +110,14 @@ def diplay_img(image):
     disp.image(image)
 
 
-def play_sequence(action, loop=True):
-    print('starting %s'%(action))
+def play_sequence(action):
     frames = pup.FRAMES[action]
-    # while True:
     for frame in frames:
+        print(frame.width, frame.height)
         diplay_img(frame)
         time.sleep(0.1)
-        # if not loop:
-        #     break
 
+play_sequence('walk_front')
 
 # WIZARD INTERACTIONS
 
@@ -160,11 +158,11 @@ def handle_walk_left():
 
 @socketio.on('sit_front')
 def handle_sit_front():
-    play_sequence('sit_front', loop=False)
+    play_sequence('sit_front')
 
 @socketio.on('sit_side')
 def handle_sit_side():
-    play_sequence('sit_side', loop=False)
+    play_sequence('sit_side')
     play_sequence('sitting_side')
 
 @socketio.on('down_side')
@@ -185,7 +183,6 @@ def signal_handler(sig, frame):
     audio_stream.terminate()
     sys.exit(0)
 
-# play_sequence('walk_front')
 signal.signal(signal.SIGINT, signal_handler)
 
 
