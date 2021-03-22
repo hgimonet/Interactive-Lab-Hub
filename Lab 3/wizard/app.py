@@ -87,7 +87,7 @@ disp.image(image)
 def play_sequence(action):
     frames = pup.FRAMES[action]
     for frame in frames:
-        disp.image(frame)
+        disp.image(frame.rotate(90))
         time(0.1)
 
 play_sequence('walk_front')
