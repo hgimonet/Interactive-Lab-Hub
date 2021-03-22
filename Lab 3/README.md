@@ -80,7 +80,7 @@ Snigdah liked the idea of the memory game, but was concerned about the computer 
 
 I actually pivoted midway through lab, because I wanted to work on something a little more exciting, and hearing about other people's projects made me more daring. My next concept is a virtual dog that you can do tricks with!
 
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/Wizard_Screenshot.png" width="400">
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/storyboard.jpg" width="400">
 
 I discussed with my husband (without telling him about the wizarding bit), and he mentioned that the dog could bark when it feels ignored or happy.
 
