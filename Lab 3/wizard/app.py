@@ -112,12 +112,10 @@ def diplay_img(image):
 
 def play_sequence(action, loop=True):
     frames = pup.FRAMES[action]
-    while True:
+    for i in range(3):
         for frame in frames:
             diplay_img(frame)
             time.sleep(0.1)
-        if not loop:
-            break
 
 play_sequence('walk_front')
 
