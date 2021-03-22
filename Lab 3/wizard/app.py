@@ -110,7 +110,7 @@ def diplay_img(image):
     disp.image(image)
 
 
-def play_sequence(action, loops=3):
+def play_sequence(action, loops=5):
     frames = pup.FRAMES[action]
     for i in range(loops):
         for frame in frames:

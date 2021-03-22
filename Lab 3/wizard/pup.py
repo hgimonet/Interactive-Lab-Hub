@@ -61,7 +61,7 @@ for crop in CROPS:
     FRAMES[crop] = gen_frames(CROPS[crop])
     # gen_gif(crop)
 
-FRAMES['love'] = gen_frames(CROPS['sitting_side'], love=True)*3
+FRAMES['love'] = gen_frames(CROPS['sitting_side'], love=True)
 # gen_gif('love')
 
 # for action in CROPS:
