@@ -86,7 +86,7 @@ disp.image(image)
 # WIZARD INTERACTIONS
 
 @socketio.on('bark')
-def handle_bark(val):
+def handle_bark():
     call("echo 'woof woof' | festival --tts", shell=True)
 
 @socketio.on('speak')
