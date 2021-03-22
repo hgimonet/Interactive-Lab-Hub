@@ -116,6 +116,7 @@ The wizard setup can be seen below:
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/Wizard_Screenshot.png" width="400">
 
 The demo is below:
+
 [![](http://img.youtube.com/vi/BM8UjBPzM5o/0.jpg)](http://www.youtube.com/watch?v=BM8UjBPzM5o "Virtual Pup")
 
 ## Test the system
