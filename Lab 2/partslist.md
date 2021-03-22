@@ -2,7 +2,7 @@
 
 
 | Parts	| Here | Adafruit # | API | Description / Notes |
-| :--- | :---: | :---: | :---: |  ---: |
+| :--- | :---: | :---: | :---: |  :--- |
 | [Raspberry. Pi 4 with 4GB](https://www.adafruit.com/product/) | yes | | |
 | [Case](https://www.adafruit.com/product/4301) | yes | | |
 | [Power supply](https://www.adafruit.com/product/4298) | yes | | |
@@ -19,7 +19,7 @@
 | [Button/led red](https://www.sparkfun.com/products/15932) | yes | | |
 | [OLED screen](https://www.sparkfun.com/products/17153) | yes | | |
 | [LED stick](https://www.sparkfun.com/products/14783) | no | |  |
-| [Joystick](https://www.sparkfun.com/products/15168) | yes | | |
+| [Joystick](https://www.sparkfun.com/products/15168) | yes | | [Python Github](https://github.com/sparkfun/Qwiic_Joystick) |
 | [Keypad](https://www.sparkfun.com/products/15290) | no | | |
 | [USB microphone](https://www.sparkfun.com/products/9434) | yes | | |
 | [Speaker]() | no | | |
