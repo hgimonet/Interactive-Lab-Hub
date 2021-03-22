@@ -200,9 +200,11 @@ wordsIn.onkeyup = (e) => { if (e.keyCode === 13) { send.click(); } };
   
 setInterval(() => {
   socket.emit('ping-gps', 'dat')
-  socket.emit('ping-tft')
 }, 100)
 
+setInterval(() => {
+  socket.emit('ping-tft')
+}, 100)
 socket.on('disconnect', () => {
   console.log('disconnect')
   mic.src = ''
