@@ -70,9 +70,19 @@ Create a system that runs on the Raspberry Pi that takes in one or more sensors 
 
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/sketch.jpg" height="500">
 
+Second idea is a memory game where each player adds a new word, and whoever forget the entire sequence looses!
+
 ## Share your idea sketches with Zoom Room mates and get feedback
 
 *what was the feedback? Who did it come from?*
+
+Snigdah liked the idea of the memory game, but was concerned about the computer always winning! We figured that the computer could fail to recognize a word, and that that could be a loss.
+
+I actually pivoted midway through lab, because I wanted to work on something a little more exciting, and hearing about other people's projects made me more daring. My next concept is a virtual dog that you can do tricks with!
+
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/storyboard.jpg" width="400">
+
+I discussed with my husband (without telling him about the wizarding bit), and he mentioned that the dog could bark when it feels ignored or happy.
 
 ## Prototype your system
 
@@ -81,11 +91,23 @@ The system should:
 * use one or more sensors
 * require participants to speak to it. 
 
-*Document how the system works*
+The system uses
+- a Raspberry Pi
+- a TFT screen
+- a microphone
+- an audio player
+- a MPU6050 accelerometer
 
-Using sprite from 
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/setup.jpg" width="400">
 
-*Include videos or screencaptures of both the system and the controller.*
+The virtual pup is made of sprites I borrowed from [a game mod forum](https://community.playstarbound.com/threads/fluffy-dogs-other-alternative-dog-sprites-update-8-pug-time.109948/). I generated looping frames in [wizard/pup.py](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/wizard/pup/py) for all the pup's possible reactions. In [wizard/app.py](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/wizard/app.py), I have a wizard of oz setup so that I can bark, as well as change the pup's actions displayed on the TFT screen. I am able to also record the actor's speech to find commands for the pup to follow. The user can also pet or wave at the dog with the accelerometer.
+
+The wizard setup can be seen below:
+
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/Wizard_Screenshot.png" width="400">
+
+The demo is below:
+[![](http://img.youtube.com/vi/BM8UjBPzM5o/0.jpg)](http://www.youtube.com/watch?v=BM8UjBPzM5o "Virtual Pup")
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
@@ -93,18 +115,19 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-*your answer here*
+
+I wasn't able to make the animations loop infinitely, so the pup is frozen during most of the interaction. I found there are many more things the actors though to try in terms of interactions with the pup (other tricks like paw), just as some interactions I though would be obvious (like calling the dog) were not to my actors. It seems the affordances aren't super clear here.
 
 ### What worked well about the controller and what didn't?
 
-*your answer here*
+The controller actually worked pretty well for what I was aiming for.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-*your answer here*
-
+Definitely incorporate more possible interactions, and find a way to signal what is possible? One of my users said this felt like a voice-controlled tamachochi -- I think I want to push that further - can I add feeding? How do I prompt my used to pet the dog with the accelerometer?
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-*your answer here*
+My user definitely had different preconceptions about what they could or couldn't do with the virtual pup; I want to try prompting different ways, and observe what users do when the encounter something voice-based, where you really don't have a clear set of possible instructions. 
 
+In terms of modalities, I think it would be great for the user to be able to personalize their dog as well - maybe they can select a dog and a background? Are people more adventurous or excited when they customized the device?
