@@ -186,7 +186,7 @@ play.onclick = () => {
     play.innerText='Eavesdrop'
   }
   
-}
+};
 
 //send.onclick = () => {
 //  socket.emit('speak', wordsIn.value)
