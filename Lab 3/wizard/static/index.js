@@ -202,9 +202,6 @@ setInterval(() => {
   socket.emit('ping-gps', 'dat')
 }, 100)
 
-setInterval(() => {
-  socket.emit('ping-tft')
-}, 100)
 socket.on('disconnect', () => {
   console.log('disconnect')
   mic.src = ''

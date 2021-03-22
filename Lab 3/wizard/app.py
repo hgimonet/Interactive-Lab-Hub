@@ -110,9 +110,9 @@ def diplay_img(image):
     disp.image(image)
 
 
-def play_sequence(action, loop=True):
+def play_sequence(action, loops=3):
     frames = pup.FRAMES[action]
-    for i in range(3):
+    for i in range(loops+1):
         for frame in frames:
             diplay_img(frame)
             time.sleep(0.1)
@@ -139,11 +139,11 @@ def handle_walk_left():
 
 @socketio.on('sit_front')
 def handle_sit_front():
-    play_sequence('sit_front', loop=False)
+    play_sequence('sit_front', loops=1)
 
 @socketio.on('sit_side')
 def handle_sit_side():
-    play_sequence('sit_side', loop=False)
+    play_sequence('sit_side', loops=1)
     play_sequence('sitting_side')
 
 @socketio.on('down_side')
