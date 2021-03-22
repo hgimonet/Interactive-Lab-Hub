@@ -133,6 +133,43 @@ bark.onclick = () => {
   socket.emit('bark')
 }
 
+walk_front.onclick = () => {
+    socket.emit('walk_front')
+}
+
+walk_right.onclick = () => {
+    socket.emit('walk_right')
+}
+
+walk_back.onclick = () => {
+    socket.emit('walk_back')
+}
+
+walk_left.onclick = () => {
+    socket.emit('walk_left')
+}
+
+sit_front.onclick = () => {
+    socket.emit('sit_front')
+}
+
+sit_side.onclick = () => {
+    socket.emit('sit_side')
+}
+
+sitting_side.onclick = () => {
+    socket.emit('sitting_side')
+}
+
+down_side.onclick = () => {
+    socket.emit('down_side')
+}
+
+run_side.onclick = () => {
+    socket.emit('run_side')
+}
+
+
 play.onclick = () => {
   if(mic.paused) {
   console.log('redo audio')

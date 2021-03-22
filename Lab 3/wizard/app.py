@@ -26,6 +26,8 @@ import adafruit_rgb_display.st7735 as st7735  # pylint: disable=unused-import
 import adafruit_rgb_display.ssd1351 as ssd1351  # pylint: disable=unused-import
 import adafruit_rgb_display.ssd1331 as ssd1331  # pylint: disable=unused-import
 
+
+import pup
  
 i2c = busio.I2C(board.SCL, board.SDA)
 mpu = adafruit_mpu6050.MPU6050(i2c)
@@ -82,6 +84,13 @@ draw = ImageDraw.Draw(image)
 draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
 disp.image(image)
 
+def play_sequence(action):
+    frames = pup.FRAMES[action]
+    for frame in frames:
+        disp.image(frame)
+        time(0.1)
+
+play_sequence('walk_front')
 
 # WIZARD INTERACTIONS
 
@@ -91,7 +100,7 @@ def handle_bark():
 
 @socketio.on('speak')
 def handle_speak(val):
-    call(f"espeak '{val}'", shell=True)
+    call(f"echo '{val}' | festival --tts", shell=True)
 
 @socketio.on('connect')
 def test_connect():
@@ -101,7 +110,10 @@ def test_connect():
 @socketio.on('ping-gps')
 def handle_message(val):
     # print(mpu.acceleration)
-    emit('pong-gps', mpu.acceleration) 
+    emit('pong-gps', mpu.acceleration)
+
+@socketio.on('walk_front'):
+def handle_walk_front():
 
 
 
