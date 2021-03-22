@@ -121,25 +121,6 @@ play_sequence('walk_front')
 
 # WIZARD INTERACTIONS
 
-@socketio.on('bark')
-def handle_bark():
-    call("echo 'woof woof' | festival --tts", shell=True)
-
-@socketio.on('speak')
-def handle_speak(val):
-    call(f"echo '{val}' | festival --tts", shell=True)
-
-@socketio.on('connect')
-def test_connect():
-    print('connected')
-    emit('after connect',  {'data':'Lets dance'})
-
-@socketio.on('ping-gps')
-def handle_message(val):
-    # print(mpu.acceleration)
-    emit('pong-gps', mpu.acceleration)
-
-
 @socketio.on('walk_front')
 def handle_walk_front():
     play_sequence('walk_front')
@@ -173,6 +154,24 @@ def handle_down_side():
 def handle_run_side():
     play_sequence('run_side')
 
+
+@socketio.on('bark')
+def handle_bark():
+    call("echo 'woof woof' | festival --tts", shell=True)
+
+@socketio.on('speak')
+def handle_speak(val):
+    call(f"echo '{val}' | festival --tts", shell=True)
+
+@socketio.on('connect')
+def test_connect():
+    print('connected')
+    emit('after connect',  {'data':'Lets dance'})
+
+@socketio.on('ping-gps')
+def handle_message(val):
+    print(mpu.acceleration)
+    emit('pong-gps', mpu.acceleration)
 
 @app.route('/')
 def index():

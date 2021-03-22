@@ -83,6 +83,8 @@ The system should:
 
 *Document how the system works*
 
+Using sprite from 
+
 *Include videos or screencaptures of both the system and the controller.*
 
 ## Test the system
