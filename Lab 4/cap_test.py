@@ -16,5 +16,5 @@ while True:
             print(f"Banana {i} touched!")
             if i==5:
                 lick_count +=1
-    print(lick_count)
+                print("licks:",lick_count)
     time.sleep(0.25)  # Small delay to keep from spamming output messages.
