@@ -133,6 +133,3 @@ Make a paper display that uses the servo to show how many times a button on the 
 
 
 **a. Make a video of your paper display in action.**
-
-[Article about play dough prototypes](https://makingsociety.fr/pate-a-modeler-pour-prototyper/)
-[Dolls by Marine Serre](https://lacompagniedesradisworld.tumblr.com/)
