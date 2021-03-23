@@ -7,7 +7,7 @@ mylcd = i2c_LCD_driver.lcd()
 
 
 @click.command()
-@click.option('text','t')
+@click.option('--message', '-m')
 @click.option('--clear', '-c', default=False)
 def main(text, clear):
     # click.echo("This is a CLI built with Click ✨")
