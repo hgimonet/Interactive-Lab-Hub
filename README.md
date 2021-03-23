@@ -14,3 +14,9 @@ For demos, see [here](https://www.youtube.com/watch?v=A4iu2SVTTEs&list=PLRs-v4T8
 
 See [parts inventory](Lab%202/partslist.md) and [useful code snipets](Lab%202/pi_setup.md).
 
+<<<<<<< HEAD
+=======
+[Lab 3. You're a Wizard](Lab%203/)
+
+[Lab 4. Ph-UI!!!](Lab%204/)
+>>>>>>> 88e32de744f3ef50fddf347b736342cbfeeef28d
