@@ -100,6 +100,11 @@ We just received some of the small oled screens that we had coped to include in 
 <img src="https://cdn.discordapp.com/attachments/679466987314741338/823354087105101854/PXL_20210322_003033073.jpg" height="200">
 </p>
 
+Since I cannot make it to Roosevelt island to pick up the OLED, I tried hooking up a 1602 LCD display to the instead, by following [this tutorial](https://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/). 
+I wrote a quick command line interface to write on the LED screen [here](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/LCD_driver_LCD_write.py).
+
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/LED_setup.jpg" width="600" />
+
 
 
 ### Part C
