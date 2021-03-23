@@ -100,13 +100,23 @@ The system uses
 
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/setup.jpg" width="400">
 
-The virtual pup is made of sprites I borrowed from [a game mod forum](https://community.playstarbound.com/threads/fluffy-dogs-other-alternative-dog-sprites-update-8-pug-time.109948/). I generated looping frames in [wizard/pup.py](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/wizard/pup/py) for all the pup's possible reactions. In [wizard/app.py](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/wizard/app.py), I have a wizard of oz setup so that I can bark, as well as change the pup's actions displayed on the TFT screen. I am able to also record the actor's speech to find commands for the pup to follow. The user can also pet or wave at the dog with the accelerometer.
+The virtual pup is made of sprites I borrowed from [a game mod forum](https://community.playstarbound.com/threads/fluffy-dogs-other-alternative-dog-sprites-update-8-pug-time.109948/). I generated looping frames for the TFT to display in [wizard/pup.py](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/wizard/pup/py) for all the pup's possible reactions. 
+
+Here are some of the pup's interaction frames: 
+
+![Love](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/wizard/imgs/doggy_love.gif)
+![Walk](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/wizard/imgs/doggy_walk_right.gif)
+![Sit](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/wizard/imgs/doggy_sit_side.gif)
+
+
+In [wizard/app.py](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/wizard/app.py), I have a wizard of oz setup so that I can bark, as well as change the pup's actions displayed on the TFT screen. I am able to also record the actor's speech to find commands for the pup to follow. The user can also pet or wave at the dog with the accelerometer.
 
 The wizard setup can be seen below:
 
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%203/Wizard_Screenshot.png" width="400">
 
 The demo is below:
+
 [![](http://img.youtube.com/vi/BM8UjBPzM5o/0.jpg)](http://www.youtube.com/watch?v=BM8UjBPzM5o "Virtual Pup")
 
 ## Test the system
