@@ -39,6 +39,11 @@ For lab this week, we focus on the prototyping the physical look and feel of the
 5. Submit these in the lab 4 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same for each person in the group.
 
 
+For the sketches, see below:
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/edit/Spring2021/Lab%204/imgs/smart_bowl_sketches.png" width="400" />
+
+
+
 ## Overview
 Here are the parts of the assignment
 
