@@ -136,18 +136,24 @@ I wrote a quick command line interface to write on the LED screen [here](https:/
 
 #### Preliminary Sketches
 
+Make a paper display for your project that communicates the state of the Pi and a sensor. Ideally you should design it so that you can slide the Pi out to work on the circuit or programming, and then slide it back in and reattach a few wires to be back in operation.
+ 
+**a. Document the design for your paper display.** (e.g. if you had to make it again from scratch, what information would you need?). Include interim iterations (or at least tell us about them).
+
 For the sketches, see below:
 
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/smart_bowl_sketches.png" width="400" />
 
-[comment]: <> (**a. Make a video of your paper display in action.**)
+I made a cartboard shape with holes for the janky OLED display:
+TODO
 
-#### Working prototype
+**b. Make a video of your paper display in action.**
 
 The working prototype is available here:
 
 [![](http://img.youtube.com/vi/LUEwM_ZiFIg/0.jpg)](http://www.youtube.com/watch?v=LUEwM_ZiFIg "")
 
+**c. Explain the rationale for the design.** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
 
 ### Part D
 ### Materiality
@@ -155,3 +161,8 @@ The working prototype is available here:
 **Open Ended**: We are putting very few constraints on this part but we want you to get creative.
 
 Design a system with the Pi and anything from your kit with a focus on form, and materiality. The "stuff" that enclose the system should be informed by the desired interaction. What would a computer made of rocks be like? How would an ipod made of grass behave? Would a roomba made of gold clean your floor any differently?
+
+**a. document the material prototype.** Include candidates that were considered even if they were set aside later.
+
+**b. explain the selection.**
+
