@@ -145,7 +145,8 @@ For the sketches, see below:
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/smart_bowl_sketches.png" width="400" />
 
 I made a cartboard shape with holes for the janky OLED display:
-TODO
+
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/looks_like_prototype.jpg" width="400" />
 
 **b. Make a video of your paper display in action.**
 
