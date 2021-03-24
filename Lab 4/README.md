@@ -39,11 +39,6 @@ For lab this week, we focus on the prototyping the physical look and feel of the
 5. Submit these in the lab 4 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same for each person in the group.
 
 
-For the sketches, see below:
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/smart_bowl_sketches.png" width="400" />
-
-
-
 ## Overview
 Here are the parts of the assignment
 
@@ -53,11 +48,7 @@ B) [OLED screen](#part-b)
 
 C) [Paper Display](#part-c)
 
-D) [Wizard the device](#part-d-wizard-the-device) 
-
-E) [Costume the device](#part-e-costume-the-device)
-
-F) [Record the interaction](#part-f-record)
+D) [Record the interaction](#part-d-record)
 
 ## The Report
 This readme.md page in your own repository should be edited to include the work you have done. You can delete everything but the headers and the sections between the **stars**. Write the answers to the questions under the starred sentences. 
@@ -115,35 +106,48 @@ I wrote a quick command line interface to write on the LED screen [here](https:/
 ### Part C
 ### Paper Display
 
-Here is an Pi with a paper faceplate on it to turn it into a display:
+[comment]: <> (Here is an Pi with a paper faceplate on it to turn it into a display:)
 
-<img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/paper_if.png?raw=true"  width="250"/>
-
-
-This is fine, but it can be a bit difficult to lay out a great and user friendly display within the constraints of the Pi. Also, it really only works for applications where people can come and stand over the Pi, or where you can mount the Pi to the wall.
-
-Here is another prototype for a paper display:
-
-<img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/b_box.png?raw=true"  width="250"/>
-
-It holds a pi and usb power supply, and provides a front stage on which to put writing, graphics, LEDs, buttons or displays.
-
-This design can be made by scoring a long strip of corrugated cardboard of width X, with the following measurements:
-
-| Y height of box <br> <sub><sup>- thickness of cardboard</sup></sub> | Z  depth of box <br><sub><sup>- thickness of cardboard</sup></sub> | Y height of box  | Z  depth of box | H height of faceplate <br><sub><sup>* * * * * (don't make this too short) * * * * *</sup></sub>|
-| --- | --- | --- | --- | --- | 
-
-Fold the first flap of the strip so that it sits flush against the back of the face plate, and tape, velcro or hot glue it in place. This will make a H x X interface, with a box of Z x X footprint (which you can adapt to the things you want to put in the box) and a height Y in the back. 
-
-Here is an example:
-
-<img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/horoscope.png?raw=true"  width="250"/>
+[comment]: <> (<img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/paper_if.png?raw=true"  width="250"/>)
 
 
-Make a paper display for your project that communicates the state of the Pi and a sensor. Ideally you should design it so that you can slide the Pi out to work on the circuit or programming, and then slide it back in and reattach a few wires to be back in operation.
+[comment]: <> (This is fine, but it can be a bit difficult to lay out a great and user friendly display within the constraints of the Pi. Also, it really only works for applications where people can come and stand over the Pi, or where you can mount the Pi to the wall.)
+
+[comment]: <> (Here is another prototype for a paper display:)
+
+[comment]: <> (<img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/b_box.png?raw=true"  width="250"/>)
+
+[comment]: <> (It holds a pi and usb power supply, and provides a front stage on which to put writing, graphics, LEDs, buttons or displays.)
+
+[comment]: <> (This design can be made by scoring a long strip of corrugated cardboard of width X, with the following measurements:)
+
+[comment]: <> (| Y height of box <br> <sub><sup>- thickness of cardboard</sup></sub> | Z  depth of box <br><sub><sup>- thickness of cardboard</sup></sub> | Y height of box  | Z  depth of box | H height of faceplate <br><sub><sup>* * * * * &#40;don't make this too short&#41; * * * * *</sup></sub>|)
+
+[comment]: <> (| --- | --- | --- | --- | --- | )
+
+[comment]: <> (Fold the first flap of the strip so that it sits flush against the back of the face plate, and tape, velcro or hot glue it in place. This will make a H x X interface, with a box of Z x X footprint &#40;which you can adapt to the things you want to put in the box&#41; and a height Y in the back. )
+
+[comment]: <> (Here is an example:)
+
+[comment]: <> (<img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/horoscope.png?raw=true"  width="250"/>)
 
 
-**a. Make a video of your paper display in action.**
+[comment]: <> (Make a paper display for your project that communicates the state of the Pi and a sensor. Ideally you should design it so that you can slide the Pi out to work on the circuit or programming, and then slide it back in and reattach a few wires to be back in operation.)
+
+#### Preliminary Sketches
+
+For the sketches, see below:
+
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/smart_bowl_sketches.png" width="400" />
+
+[comment]: <> (**a. Make a video of your paper display in action.**)
+
+#### Working prototype
+
+The working prototype is available here:
+
+[![](http://img.youtube.com/vi/LUEwM_ZiFIg/0.jpg)](http://www.youtube.com/watch?v=LUEwM_ZiFIg "")
+
 
 ### Part D
 ### Materiality
