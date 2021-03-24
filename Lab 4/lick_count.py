@@ -20,5 +20,5 @@ while True:
         lick_count = 0
     if mpr121[BOWL_ID].value:
         lick_count +=1
-    lcd.lcd_write('Lick Count: %4d'%(lick_count))
+    lcd.lcd_display_string('Lick Count: %4d'%(lick_count))
     time.sleep(1)
