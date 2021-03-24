@@ -40,7 +40,7 @@ For lab this week, we focus on the prototyping the physical look and feel of the
 
 
 For the sketches, see below:
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/edit/Spring2021/Lab%204/imgs/smart_bowl_sketches.png" width="400" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/smart_bowl_sketches.png" width="400" />
 
 
 
