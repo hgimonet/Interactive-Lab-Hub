@@ -6,14 +6,16 @@ import busio
 import adafruit_ssd1306
 
 # Create the I2C interface.
-# i2c = busio.I2C(board.SCL, board.SDA)
-i2c = busio.I2C(0, 27)
+i2c = busio.I2C(board.SCL, board.SDA)
+# i2c = busio.I2C(0, 27)
 
 # Create the SSD1306 OLED class.
 # The first two parameters are the pixel width and pixel height.  Change these
 # to the right size for your display!
 oled = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
 
+height = 2*8
+width = 16*5
 
 # Helper function to draw a circle from a given position with a given radius
 # This is an implementation of the midpoint circle algorithm,
