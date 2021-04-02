@@ -139,7 +139,7 @@ Make a paper display for your project that communicates the state of the Pi and 
 
 For the sketches, see below:
 
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/smart_bowl_sketches.png" width="400" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/smart_bowl_sketches.png" width="700" />
 
 I made a cartboard shape with holes for the janky OLED display:
 
