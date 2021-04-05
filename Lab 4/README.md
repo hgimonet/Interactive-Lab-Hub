@@ -164,18 +164,23 @@ The cartboard box I made in one go, as I had a general idea of the shape and siz
 
 ### Part D: Materiality
 
-[comment]: <> **Open Ended**: We are putting very few constraints on this part but we want you to get creative.
+[comment]: <> (**Open Ended**: We are putting very few constraints on this part but we want you to get creative.)
 
-[comment]: <> Design a system with the Pi and anything from your kit with a focus on form, and materiality. The "stuff" that enclose the system should be informed by the desired interaction. What would a computer made of rocks be like? How would an ipod made of grass behave? Would a roomba made of gold clean your floor any differently?
+[comment]: <> (Design a system with the Pi and anything from your kit with a focus on form, and materiality. The "stuff" that enclose the system should be informed by the desired interaction. What would a computer made of rocks be like? How would an ipod made of grass behave? Would a roomba made of gold clean your floor any differently?)
 
-[comment]: <> **a. document the material prototype.** Include candidates that were considered even if they were set aside later.
+[comment]: <> (**a. document the material prototype.** Include candidates that were considered even if they were set aside later.)
 
-I wanted to try my hand at working with plastic, which I thought would be appropriate since the final device would have to be waterproof. I learned that plastic is much much harder to work with.
+I wanted to try my hand at working with plastic, which I thought would be appropriate since the final device would have to be waterproof. I learned that plastic is much much harder to work with. Because of that, I figured I could leverage the original corugated qualtity and shape of the plastic, and only modify it to fit the display and button. Because the shape was not oriented towards the top, I thought it could make a good wall display.
 
 <p float="left">
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083538.jpg" width="300" />
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083551.jpg" width="600" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083538.jpg" height="600" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083551.jpg" height="600" />
 </p>
+
+I also made a third iteration with an upcycled plastic takout bowl and a catboard box - I was still too chicken to try it with water, but theoratically it would be safe to use. The video is bellow:
+
+[![](http://img.youtube.com/vi/vGvevt46Yco/0.jpg)](http://www.youtube.com/watch?v=vGvevt46Yco "")
+
 
 For the prototype, I also considered home-made drying play dough, but realized that the things I make out  of that shrink, so I wouldn't be able to fit it to the oled display.
 
