@@ -133,6 +133,12 @@ I wrote a quick command line interface to write on the LED screen [here](https:/
 
 #### Preliminary Sketches
 
+I desgined a lick-counting bowl, whcih measure the amount of water drank by a dog. This can be useful if the vet has asked to pay specific attention to how much your dog is drinking, especially if you are not at home during the day. It could also serve a an empty bowl alarm system (although I couldn't figure that part out technically yet).
+
+The storyboard is below:
+
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/storyboard.jpeg" width="700" />
+
 Make a paper display for your project that communicates the state of the Pi and a sensor. Ideally you should design it so that you can slide the Pi out to work on the circuit or programming, and then slide it back in and reattach a few wires to be back in operation.
  
 **a. Document the design for your paper display.** (e.g. if you had to make it again from scratch, what information would you need?). Include interim iterations (or at least tell us about them).
@@ -162,6 +168,7 @@ This prototype shows what the device would act like, as well as a general concep
 
 The cartboard box I made in one go, as I had a general idea of the shape and size I was going for. I knew I wanted the plane with the OLED to be slanted so that a human could read the screen easily if the device was either on the floor or a low piece of furniture. The size was partly due to the fact it needed to be able to house the pi, and also because I didn't want something so small that you lose it -- idealy the display would be larger as well. I thought having something about the size of a dog bowl would be approriate. 
 
+
 ### Part D: Materiality
 
 [comment]: <> (**Open Ended**: We are putting very few constraints on this part but we want you to get creative.)
@@ -179,7 +186,7 @@ I wanted to try my hand at working with plastic, which I thought would be approp
 
 I also made a third iteration with an upcycled plastic takout bowl and a catboard box, which would be a low-fi version of the bowl-integrated version of the product. I elaborated a little more on the possibilities here:
 
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_073615.jpg" height="160" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_073615.png" height="160" />
 
 I was still too chicken to try it with water, but theoratically it would be safe to use. The video is bellow:
 
