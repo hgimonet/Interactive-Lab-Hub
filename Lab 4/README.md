@@ -193,10 +193,13 @@ I was still too chicken to try it with water, but theoratically it would be safe
 
 [![](http://img.youtube.com/vi/vGvevt46Yco/0.jpg)](http://www.youtube.com/watch?v=vGvevt46Yco "")
 
+I think as the final design for this, I would want to use wood instead of cartboard, and a ceramic bowl. It would look like this:
 
-For the prototype, I also considered home-made drying play dough, but realized that the things I make out  of that shrink, so I wouldn't be able to fit it to the oled display.
+<img src="" height="300" /> **TODO**
 
-I also really wanted to make the bowl design, but I couldnt bring myself to make a functional one with pi, since it might get wet. Waterproofness would obviously be a major material requirement for the final design, wether in the bowl or display shape.
+For the prototypes, I also considered home-made drying play dough, but realized that the things I make out  of that shrink, so I wouldn't be able to fit it to the oled display.
+
+I also really wanted to make the bowl design actually functional, but I couldnt bring myself to make a functional one with pi, since it might get wet. Waterproofness would obviously be a major material requirement for the final design, wether in the bowl or display shape.
 
 I think final materials could include porcelain and rough plastic.
 
