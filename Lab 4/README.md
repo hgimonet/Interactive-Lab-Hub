@@ -90,8 +90,8 @@ I tried the capacitor with a glass of water:
 We just received some of the small oled screens that we had coped to include in your kit. If you want one feel free to pop into the lab and get one. These don't have colors like the one on the pi but you can move it around on a cable making for more flexible interface design. The way you program this display is almost identical to the pi display. Take a look at `oled_test.py` and some more of the [Adafruit examples](https://github.com/adafruit/Adafruit_CircuitPython_SSD1306/tree/master/examples).
 
 <p float="left">
-<img src="https://cdn.sparkfun.com//assets/parts/1/6/1/3/5/17153-SparkFun_Qwiic_OLED_Display__0.91_in__128x32_-01.jpg" height="200" />
-<img src="https://cdn.discordapp.com/attachments/679466987314741338/823354087105101854/PXL_20210322_003033073.jpg" height="200">
+<img src="https://cdn.sparkfun.com//assets/parts/1/6/1/3/5/17153-SparkFun_Qwiic_OLED_Display__0.91_in__128x32_-01.jpg" height="160" />
+<img src="https://cdn.discordapp.com/attachments/679466987314741338/823354087105101854/PXL_20210322_003033073.jpg" height="160">
 </p>
 
 Since I cannot make it to Roosevelt island to pick up the OLED, I tried hooking up another (jankier) 1602 LCD display, by following [this tutorial](https://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/). 
@@ -173,11 +173,15 @@ The cartboard box I made in one go, as I had a general idea of the shape and siz
 I wanted to try my hand at working with plastic, which I thought would be appropriate since the final device would have to be waterproof. I learned that plastic is much much harder to work with. Because of that, I figured I could leverage the original corugated qualtity and shape of the plastic, and only modify it to fit the display and button. Because the shape was not oriented towards the top, I thought it could make a good wall display.
 
 <p float="left">
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083538.jpg" height="600" />
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083551.jpg" height="600" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083538.jpg" height="160" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083551.jpg" height="160" />
 </p>
 
-I also made a third iteration with an upcycled plastic takout bowl and a catboard box - I was still too chicken to try it with water, but theoratically it would be safe to use. The video is bellow:
+I also made a third iteration with an upcycled plastic takout bowl and a catboard box, which would be a low-fi version of the bowl-integrated version of the product. I elaborated a little more on the possibilities here:
+
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_073615.jpg" height="160" />
+
+I was still too chicken to try it with water, but theoratically it would be safe to use. The video is bellow:
 
 [![](http://img.youtube.com/vi/vGvevt46Yco/0.jpg)](http://www.youtube.com/watch?v=vGvevt46Yco "")
 
