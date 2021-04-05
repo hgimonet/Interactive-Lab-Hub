@@ -62,7 +62,8 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 We wanted to introduce you to the [capacitive sensor](https://learn.adafruit.com/adafruit-mpr121-gator) in your kit. It's one of the most flexible input devices we were able to provide. At boot it measures the capacitance on each of the 12 contacts. Whenever that capacitance changes it considers it a user touch. You can attach any conductive material. In your kit you have conductive fabric and copper tape that will work well, but don't limit yourself! In this lab we will use (go?) bananas!
 
 <p float="left">
-<img src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/226/medium640/MPR121_top_angle.jpg?1609282424" height="150" />
+<img src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/226/medium640/MPR121_top_angle.jpg?
+          9282424" height="150" />
 <img src="https://cdn-shop.adafruit.com/1200x900/4401-01.jpg" height="150">
 <img src="https://post.healthline.com/wp-content/uploads/2020/08/banana-pink-background-thumb-1-732x549.jpg" height="150">
 </p>
@@ -180,13 +181,13 @@ The cartboard box I made in one go, as I had a general idea of the shape and siz
 I wanted to try my hand at working with plastic, which I thought would be appropriate since the final device would have to be waterproof. I learned that plastic is much much harder to work with. Because of that, I figured I could leverage the original corugated qualtity and shape of the plastic, and only modify it to fit the display and button. Because the shape was not oriented towards the top, I thought it could make a good wall display.
 
 <p float="left">
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083538.jpg" height="160" />
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083551.jpg" height="160" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083538.jpg" height="200" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083551.jpg" height="200" />
 </p>
 
 I also made a third iteration with an upcycled plastic takout bowl and a catboard box, which would be a low-fi version of the bowl-integrated version of the product. I elaborated a little more on the possibilities here:
 
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_073615.png" height="160" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_073615.png" height="200" />
 
 I was still too chicken to try it with water, but theoratically it would be safe to use. The video is bellow:
 
