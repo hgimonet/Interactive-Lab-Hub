@@ -181,13 +181,13 @@ The cartboard box I made in one go, as I had a general idea of the shape and siz
 I wanted to try my hand at working with plastic, which I thought would be appropriate since the final device would have to be waterproof. I learned that plastic is much much harder to work with. Because of that, I figured I could leverage the original corugated qualtity and shape of the plastic, and only modify it to fit the display and button. Because the shape was not oriented towards the top, I thought it could make a good wall display.
 
 <p float="left">
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083538.jpg" height="200" />
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083551.jpg" height="200" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083538.jpg" height="300" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083551.jpg" height="300" />
 </p>
 
 I also made a third iteration with an upcycled plastic takout bowl and a catboard box, which would be a low-fi version of the bowl-integrated version of the product. I elaborated a little more on the possibilities here:
 
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_073615.png" height="200" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_073615.png" height="400" />
 
 I was still too chicken to try it with water, but theoratically it would be safe to use. The video is bellow:
 
