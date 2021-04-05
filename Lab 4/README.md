@@ -142,7 +142,8 @@ For the sketches, see below:
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/smart_bowl_sketches.png" width="700" />
 
 I made a cartboard shape with holes for the janky OLED display:
-
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/Project%20-%20Drawing%2025600176714355697268.png" width="400" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/box.jpg" width="400" />
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/looks_like_prototype.jpg" width="400" />
 
 To make the box, I started with the base, and measured all the sides so I could make the sides of the box. Each face of the box had extra tabs that were folded and either taped or stappled to the inside of the ajunct face. One thing I should have done _before_ stappling was punching the holes out for the power supply... I managed to figure it out eventually. I then measured the size of the OLED, and cut a hole in the front face so I could fit the OLED in snuggly. I also cut two thin holes at the top of the box to pass through some aluminum foil for the capacitive reset button. The aluminum foil was then attached tot he capacitor, which I taped to the box to avoid rattling. 
