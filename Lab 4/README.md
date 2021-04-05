@@ -142,9 +142,11 @@ For the sketches, see below:
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/smart_bowl_sketches.png" width="700" />
 
 I made a cartboard shape with holes for the janky OLED display:
+<p float="left">
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/Project%20-%20Drawing%2025600176714355697268.png" width="400" />
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/box.jpg" width="400" />
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/looks_like_prototype.jpg" width="400" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/box.jpg" width="400" />
+</p>
 
 To make the box, I started with the base, and measured all the sides so I could make the sides of the box. Each face of the box had extra tabs that were folded and either taped or stappled to the inside of the ajunct face. One thing I should have done _before_ stappling was punching the holes out for the power supply... I managed to figure it out eventually. I then measured the size of the OLED, and cut a hole in the front face so I could fit the OLED in snuggly. I also cut two thin holes at the top of the box to pass through some aluminum foil for the capacitive reset button. The aluminum foil was then attached tot he capacitor, which I taped to the box to avoid rattling. 
 
@@ -154,17 +156,32 @@ The working prototype is available here:
 
 [![](http://img.youtube.com/vi/LUEwM_ZiFIg/0.jpg)](http://www.youtube.com/watch?v=LUEwM_ZiFIg "")
 
+This prototype shows what the device would act like, as well as a general concept of form for the device.
+
 **c. Explain the rationale for the design.** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
 
 The cartboard box I made in one go, as I had a general idea of the shape and size I was going for. I knew I wanted the plane with the OLED to be slanted so that a human could read the screen easily if the device was either on the floor or a low piece of furniture. The size was partly due to the fact it needed to be able to house the pi, and also because I didn't want something so small that you lose it -- idealy the display would be larger as well. I thought having something about the size of a dog bowl would be approriate. 
 
 ### Part D: Materiality
 
-**Open Ended**: We are putting very few constraints on this part but we want you to get creative.
+[comment]: <> **Open Ended**: We are putting very few constraints on this part but we want you to get creative.
 
-Design a system with the Pi and anything from your kit with a focus on form, and materiality. The "stuff" that enclose the system should be informed by the desired interaction. What would a computer made of rocks be like? How would an ipod made of grass behave? Would a roomba made of gold clean your floor any differently?
+[comment]: <> Design a system with the Pi and anything from your kit with a focus on form, and materiality. The "stuff" that enclose the system should be informed by the desired interaction. What would a computer made of rocks be like? How would an ipod made of grass behave? Would a roomba made of gold clean your floor any differently?
 
-**a. document the material prototype.** Include candidates that were considered even if they were set aside later.
+[comment]: <> **a. document the material prototype.** Include candidates that were considered even if they were set aside later.
 
-**b. explain the selection.**
+I wanted to try my hand at working with plastic, which I thought would be appropriate since the final device would have to be waterproof. I learned that plastic is much much harder to work with.
+
+<p float="left">
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083538.jpg" width="600" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083551.jpg" width="300" />
+</p>
+
+For the prototype, I also considered home-made drying play dough, but realized that the things I make out  of that shrink, so I wouldn't be able to fit it to the oled display.
+
+I also really wanted to make the bowl design, but I couldnt bring myself to make a functional one with pi, since it might get wet. Waterproofness would obviously be a major material requirement for the final design, wether in the bowl or display shape.
+
+I think final materials could include porcelain and rough plastic.
+
+[comment]: <> **b. explain the selection.**
 
