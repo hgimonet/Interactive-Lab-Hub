@@ -57,13 +57,13 @@ Include any material that explains what you did in this lab hub folder, and link
 
 Labs are due on Mondays. Make sure this page is linked to on your main class hub page.
 
-### Part A
-### Capacitive Sensing, a.k.a. Human Banana Interaction
+### Part A: Capacitive Sensing, a.k.a. Human Banana Interaction
 
 We wanted to introduce you to the [capacitive sensor](https://learn.adafruit.com/adafruit-mpr121-gator) in your kit. It's one of the most flexible input devices we were able to provide. At boot it measures the capacitance on each of the 12 contacts. Whenever that capacitance changes it considers it a user touch. You can attach any conductive material. In your kit you have conductive fabric and copper tape that will work well, but don't limit yourself! In this lab we will use (go?) bananas!
 
 <p float="left">
-<img src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/226/medium640/MPR121_top_angle.jpg?1609282424" height="150" />
+<img src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/226/medium640/MPR121_top_angle.jpg?
+          9282424" height="150" />
 <img src="https://cdn-shop.adafruit.com/1200x900/4401-01.jpg" height="150">
 <img src="https://post.healthline.com/wp-content/uploads/2020/08/banana-pink-background-thumb-1-732x549.jpg" height="150">
 </p>
@@ -86,14 +86,13 @@ I tried the capacitor with a glass of water:
 
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/capacitor.jpg" height="400">
 
-### Part B
-### OLED screen
+### Part B: OLED screen
 
 We just received some of the small oled screens that we had coped to include in your kit. If you want one feel free to pop into the lab and get one. These don't have colors like the one on the pi but you can move it around on a cable making for more flexible interface design. The way you program this display is almost identical to the pi display. Take a look at `oled_test.py` and some more of the [Adafruit examples](https://github.com/adafruit/Adafruit_CircuitPython_SSD1306/tree/master/examples).
 
 <p float="left">
-<img src="https://cdn.sparkfun.com//assets/parts/1/6/1/3/5/17153-SparkFun_Qwiic_OLED_Display__0.91_in__128x32_-01.jpg" height="200" />
-<img src="https://cdn.discordapp.com/attachments/679466987314741338/823354087105101854/PXL_20210322_003033073.jpg" height="200">
+<img src="https://cdn.sparkfun.com//assets/parts/1/6/1/3/5/17153-SparkFun_Qwiic_OLED_Display__0.91_in__128x32_-01.jpg" height="160" />
+<img src="https://cdn.discordapp.com/attachments/679466987314741338/823354087105101854/PXL_20210322_003033073.jpg" height="160">
 </p>
 
 Since I cannot make it to Roosevelt island to pick up the OLED, I tried hooking up another (jankier) 1602 LCD display, by following [this tutorial](https://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/). 
@@ -103,8 +102,7 @@ I was able to daisy-chain the LED using the STEMMA QT cables.
 
 I wrote a quick command line interface to write on the LED screen [here](https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/LCD_driver_LCD_write.py).
 
-### Part C
-### Paper Display
+### Part C: Paper Display
 
 [comment]: <> (Here is an Pi with a paper faceplate on it to turn it into a display:)
 
@@ -136,17 +134,28 @@ I wrote a quick command line interface to write on the LED screen [here](https:/
 
 #### Preliminary Sketches
 
+I desgined a lick-counting bowl, whcih measure the amount of water drank by a dog. This can be useful if the vet has asked to pay specific attention to how much your dog is drinking, especially if you are not at home during the day. It could also serve a an empty bowl alarm system (although I couldn't figure that part out technically yet).
+
+The storyboard is below:
+
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/storyboard.jpeg" width="700" />
+
 Make a paper display for your project that communicates the state of the Pi and a sensor. Ideally you should design it so that you can slide the Pi out to work on the circuit or programming, and then slide it back in and reattach a few wires to be back in operation.
  
 **a. Document the design for your paper display.** (e.g. if you had to make it again from scratch, what information would you need?). Include interim iterations (or at least tell us about them).
 
 For the sketches, see below:
 
-<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/smart_bowl_sketches.png" width="400" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/smart_bowl_sketches.png" width="700" />
 
 I made a cartboard shape with holes for the janky OLED display:
-
+<p float="center">
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/Project%20-%20Drawing%2025600176714355697268.png" width="400" />
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/looks_like_prototype.jpg" width="400" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/box.jpg" width="800" />
+</p>
+
+To make the box, I started with the base, and measured all the sides so I could make the sides of the box. Each face of the box had extra tabs that were folded and either taped or stappled to the inside of the ajunct face. One thing I should have done _before_ stappling was punching the holes out for the power supply... I managed to figure it out eventually. I then measured the size of the OLED, and cut a hole in the front face so I could fit the OLED in snuggly. I also cut two thin holes at the top of the box to pass through some aluminum foil for the capacitive reset button. The aluminum foil was then attached tot he capacitor, which I taped to the box to avoid rattling. 
 
 **b. Make a video of your paper display in action.**
 
@@ -154,18 +163,47 @@ The working prototype is available here:
 
 [![](http://img.youtube.com/vi/LUEwM_ZiFIg/0.jpg)](http://www.youtube.com/watch?v=LUEwM_ZiFIg "")
 
+This prototype shows what the device would act like, as well as a general concept of form for the device.
+
 **c. Explain the rationale for the design.** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
 
-### Part D
-### Materiality
+The cartboard box I made in one go, as I had a general idea of the shape and size I was going for. I knew I wanted the plane with the OLED to be slanted so that a human could read the screen easily if the device was either on the floor or a low piece of furniture. The size was partly due to the fact it needed to be able to house the pi, and also because I didn't want something so small that you lose it -- idealy the display would be larger as well. I thought having something about the size of a dog bowl would be approriate. 
 
-**Open Ended**: We are putting very few constraints on this part but we want you to get creative.
 
-Design a system with the Pi and anything from your kit with a focus on form, and materiality. The "stuff" that enclose the system should be informed by the desired interaction. What would a computer made of rocks be like? How would an ipod made of grass behave? Would a roomba made of gold clean your floor any differently?
+### Part D: Materiality
 
-**a. document the material prototype.** Include candidates that were considered even if they were set aside later.
+[comment]: <> (**Open Ended**: We are putting very few constraints on this part but we want you to get creative.)
 
-**b. explain the selection.**
+[comment]: <> (Design a system with the Pi and anything from your kit with a focus on form, and materiality. The "stuff" that enclose the system should be informed by the desired interaction. What would a computer made of rocks be like? How would an ipod made of grass behave? Would a roomba made of gold clean your floor any differently?)
+
+[comment]: <> (**a. document the material prototype.** Include candidates that were considered even if they were set aside later.)
+
+I wanted to try my hand at working with plastic, which I thought would be appropriate since the final device would have to be waterproof. I learned that plastic is much much harder to work with. Because of that, I figured I could leverage the original corugated qualtity and shape of the plastic, and only modify it to fit the display and button. Because the shape was not oriented towards the top, I thought it could make a good wall display.
+
+<p float="left">
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083538.jpg" height="300" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_083551.jpg" height="300" />
+</p>
+
+I also made a third iteration with an upcycled plastic takout bowl and a catboard box, which would be a low-fi version of the bowl-integrated version of the product. I elaborated a little more on the possibilities here:
+
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%204/imgs/20210405_073615.png" height="400" />
+
+I was still too chicken to try it with water, but theoratically it would be safe to use. The video is bellow:
+
+[![](http://img.youtube.com/vi/vGvevt46Yco/0.jpg)](http://www.youtube.com/watch?v=vGvevt46Yco "")
+
+I think as the final design for this, I would want to use wood instead of cartboard, and a ceramic bowl. It would look like this:
+
+<img src="" height="300" /> **TODO**
+
+For the prototypes, I also considered home-made drying play dough, but realized that the things I make out  of that shrink, so I wouldn't be able to fit it to the oled display.
+
+I also really wanted to make the bowl design actually functional, but I couldnt bring myself to make a functional one with pi, since it might get wet. Waterproofness would obviously be a major material requirement for the final design, wether in the bowl or display shape.
+
+I think final materials could include porcelain and rough plastic.
+
+[comment]: <> (**b. explain the selection.**)
 
 ### Part 2.
 
