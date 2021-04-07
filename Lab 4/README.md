@@ -210,7 +210,9 @@ I think final materials could include porcelain and rough plastic.
 Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design.
 
 Reiterating:
+
 ### Deliverables for this lab are: 
+
 1. Sketches/photos of device designs
 1. "Looks like" prototypes: show us what how the device should look, feel, sit, weigh, etc.
 3. "Works like" prototypes: show us what the device can do
