@@ -16,6 +16,9 @@ import signal
 import sys
 from queue import Queue
 
+import numpy as np
+import scipy.signal as sg
+
  
 i2c = busio.I2C(board.SCL, board.SDA)
 mpu = adafruit_mpu6050.MPU6050(i2c)
@@ -26,6 +29,10 @@ hardware = 'plughw:2,0'
 app = Flask(__name__)
 socketio = SocketIO(app)
 audio_stream = Popen("/usr/bin/cvlc alsa://"+hardware+" --sout='#transcode{vcodec=none,acodec=mp3,ab=256,channels=2,samplerate=44100,scodec=none}:http{mux=mp3,dst=:8080/}' --no-sout-all --sout-keep", shell=True)
+
+accel_data = []
+window = 10
+thresh = 20.
 
 @socketio.on('speak')
 def handel_speak(val):
@@ -39,8 +46,18 @@ def test_connect():
 @socketio.on('ping-gps')
 def handle_message(val):
     # print(mpu.acceleration)
-    emit('pong-gps', mpu.acceleration) 
+    accel = mpu.acceleration
+    accel_data.append(accel)
+    emit('pong-gps', accel)
 
+    accel_window = accel_data[-window:]
+    # Set up threshold detection
+    above_thresh = accel > thresh
+    # Set up averaging
+    moving_avg = np.mean(accel_window)
+    # Set up peak detection
+    peaks = sg.find_peaks(accel_window)
+    print(above_thresh, moving_avg, peaks, end="\r")
 
 
 @app.route('/')
