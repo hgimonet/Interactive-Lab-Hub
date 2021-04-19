@@ -11,6 +11,13 @@ Edited by David Goedicke
 import numpy as np
 import cv2
 import sys
+import random
+
+cheers = [
+   'why so serious?',
+   'you should smile!',
+   'if you frown, you will get wrinkles'
+]
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
@@ -49,14 +56,14 @@ while(True):
        img = cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
        roi_gray = gray[y:y+h, x:x+w]
        roi_color = img[y:y+h, x:x+w]
-       # detect eyes
        # eyes = eye_cascade.detectMultiScale(roi_gray)
        # for (ex,ey,ew,eh) in eyes:
        #     cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
-       # detect smile
        smiles = smile_cascade.detectMultiScale(roi_gray, 1.8, 20)
        for (ex,ey,ew,eh) in smiles:
            cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,0,255),2)
+       if len(smiles) == 0:
+          print(random.choice(cheers))
 
    if webCam:
       cv2.imshow('face-detection (press q to quit.)',img)
