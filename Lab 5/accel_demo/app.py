@@ -50,7 +50,7 @@ def handle_message(val):
     accel_data.append(accel)
     emit('pong-gps', accel)
 
-    accel_window = accel_data[-window:]
+    accel_window = np.array(accel_data[-window:])
     # Set up threshold detection
     above_thresh = accel > thresh
     # Set up averaging
