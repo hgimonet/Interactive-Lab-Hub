@@ -20,6 +20,8 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 comments = ['Dont forget to smile!!',
             'What a beautiful smile!']
 is_smiling = []
+timer = 0
+
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
@@ -48,6 +50,7 @@ else:
 
 
 while(True):
+   timer += 1
    if webCam:
       ret, img = cap.read()
 
@@ -70,7 +73,9 @@ while(True):
        txt = comments[int(np.mean(is_smiling[-30:]) > 0.5)]
        # print(txt)
        cv2.putText(img, txt, (10, 50), font, 1.5, (255, 255, 255), 2, cv2.LINE_AA)
-       os.system(f"espeak '{txt}'")
+       if timer > 200:
+           os.system(f"espeak '{txt}'")
+           timer = 0
 
 
 
