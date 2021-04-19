@@ -19,6 +19,7 @@ import time
 font = cv2.FONT_HERSHEY_SIMPLEX
 comments = ['Dont forget to smile!!',
             'What a beautiful smile!']
+label = ['Not smiling', 'Smiling']
 is_smiling = []
 timer = 0
 
@@ -54,10 +55,13 @@ while(True):
     timer += 1
     if webCam:
         ret, img = cap.read()
+        img_h, w, _ = img.shape
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    if len(faces) == 0:
+        cv2.putText(img, 'No face detected', (10, img_h-30), font, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
     # only pick one face
     for (x,y,w,h) in faces[:1]:
         img = cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
@@ -71,9 +75,11 @@ while(True):
             cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,0,255),2)
         is_smiling.append(len(smiles) > 0)
         # print whether person is smiling
-        txt = comments[int(np.mean(is_smiling[-30:]) > 0.5)]
+        txt = comments[int(np.mean(is_smiling[-15:]) > 0.5)]
         # print(txt)
         cv2.putText(img, txt, (10, 50), font, 1.5, (255, 255, 255), 2, cv2.LINE_AA)
+        cv2.putText(img, label[int(is_smiling[-1])], (10, img_h-30), font, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
+
         # if timer > 20:
         #     os.system(f"espeak '{txt}'")
         #     timer = 0

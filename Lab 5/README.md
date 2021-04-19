@@ -49,12 +49,11 @@ D) [Reflect](#part-d)
 ## Part 1
 
 ### Part A
-
 ### Play with different sense-making algorithms.
 
-Befor you get started connect the RaspberryPi Camera
-V2. [The Pi hut has a great explanation on how to do that](https://thepihut.com/blogs/raspberry-pi-tutorials/16021420-how-to-install-use-the-raspberry-pi-camera)
-.
+Before you get started connect the RaspberryPi Camera V2. 
+[The Pi hut has a great explanation on how to do that.](https://thepihut.com/blogs/raspberry-pi-tutorials/16021420-how-to-install-use-the-raspberry-pi-camera)
+
 
 #### OpenCV
 
@@ -142,7 +141,6 @@ As a note, the global Python install contains also a PyTorch installation. That 
 are so inclined.
 
 ### Part B
-
 ### Construct a simple interaction.
 
 Pick one of the models you have tried, pick a class of objects, and experiment with prototyping an interaction. This can
@@ -159,7 +157,6 @@ the first face detected, and check whether is detects a smile in the face. I had
 minimum number of neighbors parameters so that the smile could be detected when the face was further away.
 
 ### Part C
-
 ### Test the interaction prototype
 
 Now flight test your interactive prototype and **note your observations**:
@@ -175,7 +172,7 @@ ones, and not detecting anything that is a frown. It however can be tricked by g
 the model probably associates teeth with smiles regardless of the shape of the mouth. I think it would work as a really
 rough mood detector, but not if users are intent on trying to break the system.
 
-Good Examples:
+*Good Examples*
 <p float="left">
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%205/imgs/Screenshot%202021-04-18%20225328.png" height="200" />
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%205/imgs/Screenshot%202021-04-18%20225425.png" height="200" />
@@ -183,10 +180,10 @@ Good Examples:
 </p>
 Left to right: Close-up smiling, close-up not smiling, far away and smiling
 
-Bad Exmaples:
+
+*Bad Examples*
 <p float="left">
 <img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%205/imgs/Screenshot%202021-04-18%20225633.png" height="200">
-<img src="" height="200">
 </p>
 
 **Think about someone using the system. Describe how you think this will work.**
@@ -208,7 +205,6 @@ the device's fault). It would be extremely important in that case to save footag
 so that it can be check with human eyes.
 
 ### Part D
-
 ### Characterize your own Observant system
 
 Now that you have experimented with one or more of these sense-making systems **characterize their behavior**. During
@@ -227,28 +223,45 @@ the lecture, we mentioned questions to help characterize a material:
 I originally thought this could be used to tell people not to frown when they are working. This type of solution would
 be handy for people spending a lot of time in front of their computer, since frowning give you wrinkles! It could also
 be used as a training device for cashiers or dancers, or anyone who should be able to perform intensive tasks without
-frowning.
-After testing the system though, I realized this would also be really handy in a camera, to take pictures without the
-user having to press a button. If it worked for multiple faces, it could be used to capture the moment where as many
-people as possible are looking at the camera and smiling.
+frowning. After testing the system though, I realized this would also be really handy in a camera, to take pictures
+without the user having to press a button. If it worked for multiple faces, it could be used to capture the moment where
+as many people as possible are looking at the camera and smiling.
 
-My device as is wouldn't work in a crowded environment. It also wouldn't work on face that are not directly looking at 
-the camera, which limits the possible use cases. I think any enviromnent with a static user would be okay, since the 
-device can be place somewhere facing the user. Any environment where the users would be invested in looking straight 
-at the device would work too -- in a personal camera, a photo-booth, or possibly a mirror. 
+My device as is wouldn't work in a crowded environment. It also wouldn't work on face that are not directly looking at
+the camera, which limits the possible use cases. I think any enviromnent with a static user would be okay, since the
+device can be place somewhere facing the user. Any environment where the users would be invested in looking straight at
+the device would work too -- in a personal camera, a photo-booth, or possibly a mirror.
 
-The way I set it up, the device breaking only happens in the form of misclassification. It definitely breaks when the 
-user grimaces, and can also make mistakes when there is more than one face in front of the camera.
+The way I set it up, the device breaking only happens in the form of misclassification. It definitely breaks when the
+user grimaces, and can also make mistakes when there is more than one face in front of the camera. I also noticed that
+leaning my head to either side could prevent the smile from being detected.
 
-The device feels a little strange - I was hoping it would be fun and encouraging, but the boxes around the face and 
-mouth are a little off-putting. I think it would make sense to remove the bounding boxes, and simply have textual 
-feedback on what is detected. I also tried voice feedback, which I think works well for a use-case where the user is 
-not looking at the video as it is taken.
+The device feels a little strange - I was hoping it would be fun and encouraging, but the boxes around the face and
+mouth are a little off-putting. I think it would make sense to remove the bounding boxes, and simply have textual
+feedback on what is detected. I also tried voice feedback, which I think works well for a use-case where the user is not
+looking at the video as it is taken.
+
+
+I have a video looking at the limitations of the detector below:
+
+[![](http://img.youtube.com/vi/hMRs5QhPz6I/0.jpg)](http://www.youtube.com/watch?v=hMRs5QhPz6I "")
 
 
 ## Part 2.
 
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use
-iwth a video.
+with a video.
+
 **Include a short video demonstrating the finished result.**
+
+For the final iteration, I decided to prototype a mirror that encourages people to smile for a little bit every day 
+(like a more positive version of the mirror in Snow White!). 
+The text on the screen could be printed on a mirror instead of overlapped on the video (on a oled behind the glass), 
+and the user would be looking at their refection rather than a video. I think this would work pretty well in a bathroom 
+-- it could also be used similarly to count down while brunshing teeth, or even washing hands.
+
+See demo below:
+
+[![](http://img.youtube.com/vi/22xD9nggCME/0.jpg)](http://www.youtube.com/watch?v=22xD9nggCME "")
+
 
