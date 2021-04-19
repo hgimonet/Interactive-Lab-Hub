@@ -17,7 +17,7 @@ import os
 import time
 
 font = cv2.FONT_HERSHEY_SIMPLEX
-comments = ["Don't forget to smile!!",
+comments = ['Dont forget to smile!!',
             'What a beautiful smile!']
 is_smiling = []
 
