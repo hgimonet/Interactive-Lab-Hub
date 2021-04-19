@@ -59,6 +59,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\Lab 5\accel_demo\app.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\Lab 5\accel_demo\static\index.js">
           <value>
             <Attribute>

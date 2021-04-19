@@ -5,6 +5,7 @@ Look here for more cascades: https://github.com/parulnith/Face-Detection-in-Pyth
 
 
 Edited by David Goedicke
+Further edited by Hortense Gimonet
 '''
 
 
@@ -12,12 +13,13 @@ import numpy as np
 import cv2
 import sys
 import random
+import os
+import time
 
-cheers = [
-   'why so serious?',
-   'you should smile!',
-   'if you frown, you will get wrinkles'
-]
+font = cv2.FONT_HERSHEY_SIMPLEX
+comments = ["Don't forget to smile!!",
+            'What a beautiful smile!']
+is_smiling = []
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
@@ -52,18 +54,25 @@ while(True):
    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-   for (x,y,w,h) in faces:
+   # only pick one face
+   for (x,y,w,h) in faces[:1]:
        img = cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
        roi_gray = gray[y:y+h, x:x+w]
        roi_color = img[y:y+h, x:x+w]
        # eyes = eye_cascade.detectMultiScale(roi_gray)
        # for (ex,ey,ew,eh) in eyes:
        #     cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
-       smiles = smile_cascade.detectMultiScale(roi_gray, 1.8, 20)
+       smiles = smile_cascade.detectMultiScale(roi_gray, 1.8, 5)
        for (ex,ey,ew,eh) in smiles:
            cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,0,255),2)
-       if len(smiles) == 0:
-          print(random.choice(cheers))
+       is_smiling.append(len(smiles) > 0)
+       # print whether person is smiling
+       txt = comments[int(np.mean(is_smiling[-30:]) > 0.5)]
+       # print(txt)
+       cv2.putText(img, txt, (10, 50), font, 1.5, (255, 255, 255), 2, cv2.LINE_AA)
+       os.system(f"espeak '{txt}'")
+
+
 
    if webCam:
       cv2.imshow('face-detection (press q to quit.)',img)
