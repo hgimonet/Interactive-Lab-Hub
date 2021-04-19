@@ -74,9 +74,9 @@ while(True):
         txt = comments[int(np.mean(is_smiling[-30:]) > 0.5)]
         # print(txt)
         cv2.putText(img, txt, (10, 50), font, 1.5, (255, 255, 255), 2, cv2.LINE_AA)
-        if timer > 20:
-            os.system(f"espeak '{txt}'")
-            timer = 0
+        # if timer > 20:
+        #     os.system(f"espeak '{txt}'")
+        #     timer = 0
 
 
 

@@ -122,6 +122,15 @@ This can be as simple as the boat detector earlier.
 Try out different interactions outputs and inputs.
 **Describe and detail the interaction, as well as your experimentation.**
 
+I tried to make a sleep detector using the eye Haar cascades, but as it turned out, the eye cascade is robust to closing your eyes.
+(I had hoped I would be able to exploit a weekness in the detection when the eyes are closed so I could make an open/closed classification). 
+Tinkering with the eye detection however gave me the idea of using the smile detector as a proxy for emotion.
+
+I ended up using the face and smile Haar cascades from OpenCV to build a lo-fi emotion detector. 
+My detector looks at the first face detected, and check whether is detects a smile in the face. 
+I had to tinker with the scale factor and minimum number of neighbors parameters so that the smile could be detected when the face was further away.
+
+
 ### Part C
 ### Test the interaction prototype
 
@@ -131,6 +140,16 @@ For example:
 1. When does it fail?
 1. When it fails, why does it fail?
 1. Based on the behavior you have seen, what other scenarios could cause problems?
+
+The smile detection only works when the face is facing the camera. 
+It's really good at detecting smiles, even tentative ones, and not detecting anything that is a frown. 
+It however can be tricked by grimaces showing teeth -- I hypothesize the model probably associates teeth with smiles regardless of the shape of the mouth.
+I think it would work as a really rough mood detector, but not if users are intent on trying to break the system.
+
+<p float="left">
+<img src="" height="200" />
+<img src="" height="200" />
+<img src="" height="200"></p>
 
 **Think about someone using the system. Describe how you think this will work.**
 1. Are they aware of the uncertainties in the system?
