@@ -30,62 +30,63 @@ smile_cascade = cv2.CascadeClassifier('haarcascade_smile.xml')
 img=None
 webCam = False
 if(len(sys.argv)>1):
-   try:
-      print("I'll try to read your image");
-      img = cv2.imread(sys.argv[1])
-      if img is None:
-         print("Failed to load image file:", sys.argv[1])
-   except:
-      print("Failed to load the image are you sure that:", sys.argv[1],"is a path to an image?")
+    try:
+        print("I'll try to read your image");
+        img = cv2.imread(sys.argv[1])
+        if img is None:
+            print("Failed to load image file:", sys.argv[1])
+    except:
+        print("Failed to load the image are you sure that:", sys.argv[1],"is a path to an image?")
 else:
-   try:
-      print("Trying to open the Webcam.")
-      cap = cv2.VideoCapture(0)
-      if cap is None or not cap.isOpened():
-         raise("No camera")
-      webCam = True
-   except:
-      img = cv2.imread("../data/test.jpg")
-      print("Using default image.")
+    try:
+        print("Trying to open the Webcam.")
+        cap = cv2.VideoCapture(0)
+        if cap is None or not cap.isOpened():
+            raise("No camera")
+        webCam = True
+    except:
+        img = cv2.imread("../data/test.jpg")
+        print("Using default image.")
 
 
 while(True):
-   timer += 1
-   if webCam:
-      ret, img = cap.read()
+    time.sleep(1)
+    timer += 1
+    if webCam:
+        ret, img = cap.read()
 
-   gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-   faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-   # only pick one face
-   for (x,y,w,h) in faces[:1]:
-       img = cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
-       roi_gray = gray[y:y+h, x:x+w]
-       roi_color = img[y:y+h, x:x+w]
-       # eyes = eye_cascade.detectMultiScale(roi_gray)
-       # for (ex,ey,ew,eh) in eyes:
-       #     cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
-       smiles = smile_cascade.detectMultiScale(roi_gray, 1.8, 5)
-       for (ex,ey,ew,eh) in smiles:
-           cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,0,255),2)
-       is_smiling.append(len(smiles) > 0)
-       # print whether person is smiling
-       txt = comments[int(np.mean(is_smiling[-30:]) > 0.5)]
-       # print(txt)
-       cv2.putText(img, txt, (10, 50), font, 1.5, (255, 255, 255), 2, cv2.LINE_AA)
-       if timer > 200:
-           os.system(f"espeak '{txt}'")
-           timer = 0
+    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    # only pick one face
+    for (x,y,w,h) in faces[:1]:
+        img = cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
+        roi_gray = gray[y:y+h, x:x+w]
+        roi_color = img[y:y+h, x:x+w]
+        # eyes = eye_cascade.detectMultiScale(roi_gray)
+        # for (ex,ey,ew,eh) in eyes:
+        #     cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
+        smiles = smile_cascade.detectMultiScale(roi_gray, 1.8, 8)
+        for (ex,ey,ew,eh) in smiles:
+            cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,0,255),2)
+        is_smiling.append(len(smiles) > 0)
+        # print whether person is smiling
+        txt = comments[int(np.mean(is_smiling[-30:]) > 0.5)]
+        # print(txt)
+        cv2.putText(img, txt, (10, 50), font, 1.5, (255, 255, 255), 2, cv2.LINE_AA)
+        if timer > 20:
+            os.system(f"espeak '{txt}'")
+            timer = 0
 
 
 
-   if webCam:
-      cv2.imshow('face-detection (press q to quit.)',img)
-      if cv2.waitKey(1) & 0xFF == ord('q'):
-         cap.release()
-         break
-   else:
-      break
+    if webCam:
+        cv2.imshow('face-detection (press q to quit.)',img)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            cap.release()
+            break
+    else:
+        break
 
 cv2.imwrite('faces_detected.jpg',img)
 cv2.destroyAllWindows()
