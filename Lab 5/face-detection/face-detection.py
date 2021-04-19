@@ -52,8 +52,8 @@ while(True):
        eyes = eye_cascade.detectMultiScale(roi_gray)
        for (ex,ey,ew,eh) in eyes:
            cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
-       smiles = smile_cascade.detectMultiScale(roi_gray)
-       for (ex,ey,ew,eh) in eyes:
+       smiles = smile_cascade.detectMultiScale(roi_gray, 1.8, 20)
+       for (ex,ey,ew,eh) in smiles:
            cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,0,255),2)
 
    if webCam:
