@@ -146,10 +146,18 @@ It's really good at detecting smiles, even tentative ones, and not detecting any
 It however can be tricked by grimaces showing teeth -- I hypothesize the model probably associates teeth with smiles regardless of the shape of the mouth.
 I think it would work as a really rough mood detector, but not if users are intent on trying to break the system.
 
+Good Examples:
 <p float="left">
-<img src="" height="200" />
-<img src="" height="200" />
-<img src="" height="200"></p>
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%205/imgs/Screenshot%202021-04-18%20225328.png" height="200" />
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%205/imgs/Screenshot%202021-04-18%20225425.png" height="200" />
+<img src="" height="200">
+</p>
+
+Bad Exmaples:
+<p float="left">
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%205/imgs/Screenshot%202021-04-18%20225633.png" height="200">
+<img src="" height="200">
+</p>
 
 **Think about someone using the system. Describe how you think this will work.**
 1. Are they aware of the uncertainties in the system?
