@@ -61,7 +61,7 @@ def on_connect(client, userdata, flags, rc):
     print(f"connected with result code {rc}")
     client.subscribe(topic)
 
-def on_message(cleint, userdata, msg):
+def on_message(client, userdata, msg):
     # if a message is recieved on the colors topic, parse it and set the color
     if msg.topic == topic:
         colors = list(map(int, msg.payload.decode('UTF-8').split(',')))
