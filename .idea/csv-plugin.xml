@@ -87,6 +87,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\Lab 6\Saycheese\photographer2.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Lab 6\camera.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\Lab 6\photographer.py">
           <value>
             <Attribute>

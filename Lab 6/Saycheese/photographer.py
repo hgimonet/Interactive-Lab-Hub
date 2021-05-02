@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 import uuid
 
 # the # wildcard means we subscribe to all subtopics of IDD
-sub_topic = 'IDD/Saycheese/#'
+topic = 'IDD/Saycheese/#'
 
 # some other examples
 # topic = 'IDD/a/fun/topic'
@@ -14,7 +14,7 @@ outputs = {}
 
 def on_connect(client, userdata, flags, rc):
     print(f"connected with result code {rc}")
-    client.subscribe(sub_topic)
+    client.subscribe(topic)
 
 
 # you can subsribe to as many topics as you'd like
@@ -62,13 +62,13 @@ if len(photo) == 1:
 
 print(val)
 
-pub_topic = "IDD/Saycheese/TakePic"
+topic = "IDD/Saycheese/TakePic"
 
 # while True:
 #     client.publish(topic, message)
 
 if val == "take picture":
-    client.publish(pub_topic, val)
+    client.publish(topic, val)
 
 # this is blocking. to see other ways of dealing with the loop
 #  https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php#network-loop
