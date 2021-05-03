@@ -1,8 +1,8 @@
 import paho.mqtt.client as mqtt
 import uuid
 
-# the # wildcard means we subscribe to all subtopics of IDD
-topic = 'IDD/Saycheese/#'
+import time
+
 
 # some other examples
 # topic = 'IDD/a/fun/topic'
@@ -14,7 +14,7 @@ outputs = {}
 
 def on_connect(client, userdata, flags, rc):
     print(f"connected with result code {rc}")
-    client.subscribe(topic)
+    client.subscribe('IDD/Saycheese/Cameras/#')
 
 
 # you can subsribe to as many topics as you'd like
@@ -24,16 +24,11 @@ def on_connect(client, userdata, flags, rc):
 # this is the callback that gets called each time a message is recived
 def on_message(client, userdata, msg):
     print(f"topic: {msg.topic} msg: {msg.payload.decode('UTF-8')}")
-    print(str(msg.topic))
-    cam_idx = str(msg.topic)[-1]
-    print(cam_idx)
+    # print(str(msg.topic))
+    cam_idx = str(msg.topic)
+    # print(cam_idx)
     outputs[cam_idx] = msg.payload.decode('UTF-8')
-    print(outputs)
-
-    # you can filter by topics
-
-
-# if msg.topic == 'IDD/some/other/topic': do thing
+    # print(outputs)
 
 # Every client needs a random ID
 client = mqtt.Client(str(uuid.uuid1()))
@@ -51,25 +46,18 @@ client.connect(
     'farlab.infosci.cornell.edu',
     port=8883)
 
-## ------------- TO SEND MESSAGES
+client.loop_start()
+# print("Beyond the loop")
 
-val = "don't take picture"
+while(True):
+    val = "don't take picture"
 
-photo = set(outputs.values())
-if len(photo) == 1:
-    if list(photo)[0] == "ready":
-        val = "take picture"
+    photo = set(outputs.values())
+    if len(photo) == 1:
+        if list(photo)[0] == "ready":
+            val = "take picture"
 
-print(val)
+    client.publish("IDD/Saycheese/TakePic", val)
+    print(val)
 
-topic = "IDD/Saycheese/TakePic"
-
-# while True:
-#     client.publish(topic, message)
-
-if val == "take picture":
-    client.publish(topic, val)
-
-# this is blocking. to see other ways of dealing with the loop
-#  https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php#network-loop
-client.loop_forever()
+    time.sleep(0.1)

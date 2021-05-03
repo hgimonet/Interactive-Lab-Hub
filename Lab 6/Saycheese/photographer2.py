@@ -92,8 +92,10 @@ while True:
         print(message_queue.get(), 'test')
         if curr_state == 'check cameras':
             # todo: save any new camera to dict
+            pass
         if curr_state == 'wait for smiles':
             # todo: check all cams smiling and send photo message
+            pass
     # state change handling
     # update curr state
     if curr_state == 'check cameras':
