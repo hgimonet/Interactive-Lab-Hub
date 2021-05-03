@@ -84,10 +84,24 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 **1. Explain your design** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
 
+Irene and I wanted to make a long-distance group photo camera. The concept is simple: to coordinate with multiple cameras to take a picture when each camera has a smiling person in the frame. This is useful because in general, it's hard to get everyone to smile at the same time, especially in large groups, and it's even harder when people are not in the same room.
+
+I imagine this as an art installation where many cameras are set up in public spaces. One could be set up in the Met, one in Central Park, in Roosevelt Island, Boston, etc. Whenever multiple people are looking at the camera (perhaps wondering what this random box is doing there), the photographer orders each camera to simultaneously take a picture of all the people looking at the camera, and a composite of all the cameras is printed at each location (we were thinking with a thermal receipt printer).
+
 **2. Diagram the architecture of the system.** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
+
+<img src="https://github.com/hgimonet/sp2021_IDD_Interactive-Lab-Hub/blob/Spring2021/Lab%206/imgs/idd%20lab%206_1.jpg" height="500">
 
 **3. Build a working prototype of the system.** Do think about the user interface: if someone encountered these bananas, would they know how to interact with them? Should they know what to expect?
 
+Our prototype consists of two pieces of code, [camera.py](./Saycheese/camera.py) and [photographer.py](./Saycheese/photographer.py). 
+- camera.py runs a camera node. It accesses the camera, and every 0.1 second, it runs Haar cascades to identidy a face and smiles, and broadcasts whether it is ready or not on its own topic in `Saycheese/Cameras`. It is also listening to the `Saycheese/TakePic` topic, and saves the current camera frame if the topic value is 'take picture'.
+- photographer.py runs the (unique) photographer node. The photographer node listens to all the subtopics in `Saycheese/Cameras`. If all the topics have the value 'ready', it broadcasts the message 'take picture' to the `Saycheese/TakePic` topic to tell the cameras to trigger.
+
 **4. Document the working prototype in use.** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
+
+A demo is available here:
+
+[![](http://img.youtube.com/vi/AUZv7hEOUSM/0.jpg)](http://www.youtube.com/watch?v=AUZv7hEOUSM "")
 
 **5. BONUS (Wendy didn't approve this so you should probably ignore it)** get the whole class to run your code and make your distributed system BIGGER.
